@@ -3,14 +3,14 @@ import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 import fs from "fs";
 
-const buildFolder = `./doc`; // Также можно использовать rootFolder
+const buildFolder = `./docs`; // Также можно использовать rootFolder
 const srcFolder = `./src`;
 
 // Базовые пути отдельно, чтобы можно было использовать для других путей
 export const basePath = {
     files: 'src/files', // Тестовая папка
     src: 'src',
-    dev: 'doc',
+    dev: 'docs',
     prod: 'prod',
     components: 'src/components',
     blocks: 'src/components/blocks', // Путь до папки с блоками препроцессорных файлов
