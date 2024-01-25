@@ -1,0 +1,62 @@
+.burger-button {
+  @include btn-reset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  min-width: unset;
+  padding: 0;
+  border: none;
+  transition: $transition;
+  cursor: pointer;
+
+  @media (min-width: $lg-width) {
+    width: 45px;
+    height: 45px;
+  }
+
+  &--down {
+    transform: rotate(90deg);
+  }
+
+  &:hover,
+  &:focus {
+    & use.icon__symbol {
+      stroke: $secondary;
+    }
+  }
+
+  & .icon {
+    width: 30px;
+    height: 30px;
+
+    @media (min-width: $lg-width) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  & use.icon__symbol {
+    stroke: $dark-gray;
+  }
+
+
+}
+
+.main-header .burger-button {
+  position: relative;
+  z-index: 5;
+
+  @media (min-width: $lg-width) {
+    display: none;
+  }
+}
+
+.main-header--fixed .burger-button {
+  @media (min-width: $lg-width) {
+    display: inline-flex;
+  }
+
+
+}

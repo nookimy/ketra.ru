@@ -1,0 +1,10 @@
+.page {
+  &__section {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  &__wrap {
+    @include container;
+  }
+}

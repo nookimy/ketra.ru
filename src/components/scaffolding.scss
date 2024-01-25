@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline-color: $secondary;
+}
+
+body {
+  min-width: $sm-width;
+  @include text-12;
+  @include mp();
+  color: $text-color;
+  background-color: $light;
+
+
+  @media (min-width: $md-width) {
+    @include text-normal;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
