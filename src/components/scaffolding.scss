@@ -14,15 +14,10 @@ html {
 
 body {
   min-width: $sm-width;
-  @include text-12;
+  @include text-normal;
   @include mp();
   color: $text-color;
   background-color: $light;
-
-
-  @media (min-width: $md-width) {
-    @include text-normal;
-  }
 }
 
 img {

@@ -7,4 +7,10 @@
   &__wrap {
     @include container;
   }
+
+  &__title {
+    @include h1;
+  }
+
+  
 }
