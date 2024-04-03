@@ -1,0 +1,129 @@
+.counter {
+    overflow: hidden;
+    background-image: url("../product/product-bg.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+
+    & .page__wrap {
+        @media (min-width: $xl-width) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "title text" ". text" "list list";
+            align-items: start;
+            justify-items: start;
+            column-gap: 40px;
+
+            &::after {
+                display: block;
+                bottom: 30px;
+                height: 100px;
+            }
+        }
+    }
+
+    & .page__subtitle {
+        position: relative;
+        @include mp;
+        @include h2;
+        margin-bottom: 30px;
+
+        @media (min-width: $xl-width) {
+            margin-bottom: 130px;
+            grid-area: title;
+            padding-left: 20px;
+        }
+    }
+
+    &__text {
+        @include text;
+        margin-bottom: 30px;
+
+        @media (min-width: $xl-width) {
+            grid-area: text;
+            margin-bottom: 75px;
+        }
+    }
+
+    &__list {
+        @include list;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;        
+
+        @media (min-width: $md-width) {
+            flex-direction: row;
+        }
+
+        @media (min-width: $xl-width) {
+            width: 100%;
+            position: relative;
+            grid-area: list;
+            gap: 0;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                width: 100vw;
+                height: 1px;
+                background-color: $dark-gray;
+                transform: translateX(-50%);
+
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+        }
+
+        & > li {
+            display: flex;
+            flex-wrap: wrap;
+            @include text-bold;
+            column-gap: 20px;
+            align-items: center;
+
+            @media (min-width: $md-width) {
+                align-items: flex-start;
+            }
+
+            @media (min-width: $xl-width) {
+                width: 20%;
+                flex-grow: 1;
+                padding: 50px 15px;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: $dark-gray;            
+                        
+
+                }
+            }
+
+            & > span {
+                @include h2;
+                display: inline-flex;
+                align-items: baseline;
+                gap: 0.2em;
+
+                & b {
+                    @include h1;
+                }
+            }
+        }
+    }
+}

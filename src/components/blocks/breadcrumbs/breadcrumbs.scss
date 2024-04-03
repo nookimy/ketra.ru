@@ -1,0 +1,67 @@
+.breadcrumbs {
+    @include container;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1px;
+      width: 1px;
+      height: 100%;
+      background-color: $dark-gray;
+    }
+
+    @media (min-width: $xl-width) {  
+        &::before {
+          left: 30px;
+        }
+    }
+
+    & ul {
+        width: 100%;
+        @include list;
+        @include text-10;
+        padding-top: 95px;
+        padding-bottom: 30px;
+        display: inline-flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 5px;
+        color: $black;
+
+        @media (min-width: $xl-width) {
+            @include text-14;
+            padding: 104px 30px 30px;
+        }        
+
+        & > li {
+            position: relative;
+            padding-right: 28px;
+            display: inline-flex;
+            flex-wrap: wrap;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 64%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 2px;
+                background-color: $dark-gray;
+            }
+
+            &:last-child {
+                &::before {
+                    display: none;
+                }
+            }
+            & > a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}

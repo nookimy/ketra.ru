@@ -1,0 +1,154 @@
+.catalog-sections {  
+
+    &__sections-list { 
+        @include list;        
+        display: flex;
+        flex-direction: column;        
+
+        @media (min-width: $lg-width) {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            position: relative;
+            gap: 0;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $dark-gray;
+                z-index: 5;
+
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            
+        }
+
+        & > li {
+            position: relative;
+            transition: $transition;
+
+            &::before {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $dark-gray;
+    
+                @media (min-width: $lg-width) {
+                    bottom: unset;
+                    left: unset;
+                    width: 1px;
+                    height: 100%;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            @media (min-width: $xl-width) {
+                &:hover {
+
+                    @include main-shadow;
+                    
+                    & img {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            
+            & > a {
+                position: relative;
+                display: flex;
+                color: inherit;
+                text-decoration: none;
+                padding: 15px 40px 15px 0;
+
+                @media (min-width: $lg-width) {
+                    display: block;
+                    padding: 0;
+                    aspect-ratio: 413 / 307;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $maize;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                    background-image: url("../icons/arrow.svg");
+                    background-size: 10px 10px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    @media (min-width: $lg-width) {
+                        width: 35px;
+                        height: 35px;
+                        top: unset;
+                        right: 30px;
+                        bottom: 30px;
+                        transform: none;
+                    }
+                }
+
+                & h3 {
+                    @include mp;
+                    @include h3;
+
+                    @media (min-width: $lg-width) {
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                    }
+                }
+
+                & span {
+                    display: none;
+
+                    @media (min-width: $lg-width) {
+                        display: block;
+                        @include h2;
+                        position: absolute;
+                        bottom: 30px;
+                        left: 30px;
+                    }
+                }
+
+                & img {
+                    display: none;
+
+                    @media (min-width: $lg-width) {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        z-index: -10;
+                    }
+
+                    @media (min-width: $xl-width) {
+                        opacity: 0;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+    }
+}

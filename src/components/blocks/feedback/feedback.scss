@@ -1,0 +1,122 @@
+.feedback {
+    & .page__subtitle {
+        @media (min-width: $lg-width) {
+            grid-area: title;
+            padding-right: 30px;
+        }
+
+        @media (min-width: $xl-width) {
+            padding-left: 30px;
+        }
+    }
+
+    & .page__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media (min-width: $lg-width) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "title form" "text form" "text-phone form" ". form";
+        }
+
+        @media (min-width: $xl-width) {
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    &__text,
+    &__text-phone {
+        @include text;
+
+        @media (min-width: $lg-width) {
+            padding-right: 30px;
+        }
+
+        @media (min-width: $xl-width) {
+            padding-left: 30px;
+        }
+
+        & p {
+            @include mp;
+        }
+    }
+
+    &__text {
+        margin-bottom: 23px;
+
+        @media (min-width: $lg-width) {
+            margin-bottom: 30px;
+            grid-area: text;
+        }
+    }
+
+    &__text-phone {
+        @media (min-width: $lg-width) {
+            grid-area: text-phone;
+        }
+    }
+
+    &__form {
+        margin-bottom: 30px;
+        width: 100%;
+
+        @media (min-width: $lg-width) {
+            position: relative;            
+            height: 100%;
+            margin-bottom: 0;
+            grid-area: form;  
+            padding-left: 30px;
+            padding-right: 30px;          
+        }
+
+        @media (min-width: $xl-width) {
+            padding-left: 60px;
+            padding-right: 60px; 
+        }
+
+        &::before {
+            @media (min-width: $lg-width) {
+                content: "";
+                position: absolute;
+                top: -60px;
+                left: 0;
+                width: 1px;
+                height: calc(100% + 90px);
+                background-color: $dark-gray;
+                transform: translateX(-1px);
+            }
+            
+            @media (min-width: $xl-width) {
+                top: -60px;
+                height: calc(100% + 165px);
+            }
+        }
+
+               
+    }
+
+    
+
+    &__phone {
+        display: inline-flex;
+        color: inherit;
+        text-decoration: none;
+        margin-top: 15px;
+
+        @media (min-width: $lg-width) {
+            margin-top: 25px;
+        }
+
+        & p {
+            @include mp;
+            @include header-phone;
+
+            & span {
+                display: block;
+                @include text-10;
+            }
+        }               
+    }
+}

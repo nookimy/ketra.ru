@@ -48,13 +48,13 @@
     &--light {
         & .location {            
             & use.icon__symbol {
-                fill: $text-gray;
+                fill: $dark-gray;
             }
 
-            border-top: 1px solid $text-gray;
+            border-top: 1px solid $dark-gray;
 
             @media (min-width: $xl-width) {
-                border-left: 1px solid $text-gray;
+                border-left: 1px solid $dark-gray;
             }
         }
     }

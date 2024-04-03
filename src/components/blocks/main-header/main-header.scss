@@ -1,7 +1,13 @@
 .main-header {
     position: fixed;
+    top: 0; left: 0;
     width: 100%;
+    transition: all .3s ease;
     z-index: 100;
+
+    &.out {
+        transform: translateY(-100%);
+      }
 
     &--dark {
         & .main-header {
@@ -30,23 +36,23 @@
         & .main-header {
             &__wrap {
                 background-color: $light;
-                color: $text-black;
-                border-bottom: 1px solid $text-gray;
+                color: $black;
+                border-bottom: 1px solid $dark-gray;
             }
 
             &__logo-wrap {
                 @media (min-width: $xl-width) {
-                    border-right: 1px solid $text-gray;
+                    border-right: 1px solid $dark-gray;
                 }
             }
             
 
             &__phone {
                 & use.icon__symbol {
-                    fill: $text-black;
+                    fill: $black;
                 }
 
-                border-left: 1px solid $text-gray;
+                border-left: 1px solid $dark-gray;
             }   
         }        
     }    

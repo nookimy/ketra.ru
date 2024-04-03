@@ -1,0 +1,214 @@
+.news {
+    &--section {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $dark-gray;
+
+            @media (min-width: $lg-width) {
+                display: none;
+            }
+        }
+
+    }
+
+
+    & .page__wrap {
+
+        @media (min-width: $lg-width) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "title link-more" "list list";
+            column-gap: 100px;
+            row-gap: 60px;
+        }
+
+        @media (min-width: $xl-width) {
+            grid-template-columns: 1fr 560px;
+            column-gap: 200px;
+            padding-bottom: 0;
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    & .page__subtitle {
+        @media (min-width: $lg-width) {
+            margin-bottom: 0;
+            grid-area: title;
+        }
+    }
+
+    &__list {
+    
+        @include list;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (min-width: $lg-width) {
+            grid-area: list;
+        }
+
+        @media (min-width: $xl-width) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            position: relative;
+            gap: 0;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $dark-gray;
+
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+
+        @media (min-width: $xl-width) {
+
+            &:nth-child(3) {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $dark-gray;
+
+            @media (min-width: $xl-width) {
+                bottom: unset;
+                left: unset;
+                width: 1px;
+                height: 100%;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        & a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 30px;
+
+            @media (min-width: $xl-width) {
+                width: 100%;
+                height: 100%;
+                padding: 30px;
+                justify-content: space-between;
+                
+            }
+        }
+
+        & time {
+            @include mp;
+            @include text;
+            color: $dark-gray;
+            margin-bottom: 10px;
+        }
+
+        & h3 {
+            @include mp;
+            @include h3;
+        }
+
+        & p {
+            display: none;
+            
+            
+
+            @media (min-width: $xl-width) {
+                position: relative;
+                @include mp;
+                display: inline-flex;
+                align-items: center;
+                @include link;
+                color: $urobilin;
+                margin-top: 100px;
+                display: block;
+                align-self: flex-end;
+                padding: 5px 30px;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $gray;
+                    z-index: -1;
+                    transition: $transition;
+                }
+
+                &::before {
+                    top: 0;
+                    transform: translateX(500px);
+                }
+
+                &::after {
+                    top: 42px;
+                    transform: translateX(-500px);
+                }
+
+                &:hover {
+                    &::before,
+                    &::after {
+                        transform: translateX(0);
+                }
+                    
+                }
+            }
+        }
+    }
+
+    & .page__link-more {
+        margin-top: 30px;
+
+        @media (min-width: $lg-width) {
+            justify-self: end;
+            align-self: center;
+            margin-top: 0;
+            grid-area: link-more;
+        }
+
+        @media (min-width: $xl-width) {
+            margin-right: 30px;
+        }
+    }
+
+
+}

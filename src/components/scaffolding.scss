@@ -2,21 +2,19 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
-
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  outline-color: $secondary;
 }
 
 body {
   min-width: $sm-width;
   @include text;
   @include mp();
-  color: $text-black;
+  color: $black;
   background-color: $light;
 }
 

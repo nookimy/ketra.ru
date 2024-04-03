@@ -41,9 +41,9 @@
   &--light {
     & .burger-button {
       & use.icon__symbol {
-        fill: $text-black;
+        fill: $black;
       }
-      border-left: 1px solid $text-gray;
+      border-left: 1px solid $gray;
       
     }
     

@@ -1,4 +1,4 @@
-<section class="calc page__section">
+<section class="calc">
     <div class="page__wrap">
         <h2 class="page__subtitle page__subtitle--light">Расчет стоимости</h2>
         <form class="calc__form">
@@ -6,10 +6,10 @@
                 <p>Калькулятор расхода кирпича на строительство</p>
                 <fieldset id="brick-model">
                     <legend>Выберите модель кирпича:</legend>
-                    <select name="pets" id="pet-select">
-                        <option value="">Солома 1 NF</option>
-                        <option value="dog">Солома 1 NF</option>
-                        <option value="cat">Солома 1 NF</option>
+                    <select>
+                        <option>Солома 1 NF</option>
+                        <option>Солома 1 NF</option>
+                        <option>Солома 1 NF</option>
                     </select>
                 </fieldset>
 
@@ -56,33 +56,33 @@
                 <button class="button button--secondary">Добавить проем</button>
             </div>
             <div class="calc__column calc__column--result">
-                <dl>
-                    <div>
+                <dl class="result">
+                    <div class="result__item result__item--total">
                         <dt>Стоимость расхода кирпича</dt>
                         <dd>0,00</dd>
                     </div>
-                    <div>
+                    <div class="result__item">
                         <dt>Всего кирп.блоков</dt>
                         <dd>0</dd>
                     </div>
-                    <div>
+                    <div class="result__item">
                         <dt>Всего поддонов</dt>
                         <dd>0</dd>
                     </div>
-                    <div>
+                    <div class="result__item">
                         <dt>Количество раствора</dt>
                         <dd>0</dd>
                     </div>
-                    <div>
+                    <div class="result__item">
                         <dt>Общая площадь стены:</dt>
                         <dd>0</dd>
                     </div>
-                    <div>
+                    <div class="result__item">
                         <dt>Общий объем стены:</dt>
                         <dd>0</dd>
                     </div> 
                 </dl>
-                <a class="button button--main">Получить консультацию</a>
+                <button class="button button--main">Получить консультацию</button>
             </div>
         </form>
         

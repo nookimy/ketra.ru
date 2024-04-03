@@ -1,1 +1,58 @@
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/header-fixed.js"></script>
+<script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
+
+<script src="js/scrollbooster.js"></script>
+
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/swiper-set.js"></script>
+<script>
+    const swiperProductPrev = new Swiper('.preview-gellery', {
+        spaceBetween: 15,
+        slidesPerView: 2.5,        
+        freeMode: true,
+        watchSlidesProgress: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        breakpoints: {
+            1200: {
+                spaceBetween: 20,
+            },
+        }
+    });
+    const swiperProductMain = new Swiper('.main-gellery', {
+        slidesPerView: 1,
+        thumbs: {
+            swiper: swiperProductPrev,
+        },
+
+    });
+
+    const swiperExamplesPrev = new Swiper('.examples-preview-gellery', {
+        spaceBetween: 15,
+        slidesPerView: 3,        
+        freeMode: true,
+        watchSlidesProgress: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        breakpoints: {
+            1200: {
+                spaceBetween: 20,
+                slidesPerView: 4, 
+            },
+        }
+    });
+    const swiperExamplesMain = new Swiper('.examples-main-gellery', {
+        slidesPerView: 1,
+        thumbs: {
+            swiper: swiperExamplesPrev,
+        },
+
+    });
+</script>
 <script src="js/script.js"></script>
+<script src="js/accordion.js"></script>

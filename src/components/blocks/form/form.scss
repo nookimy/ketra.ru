@@ -1,0 +1,75 @@
+.form {
+    &--feedback {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+
+        @media (min-width: $md-width) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "message ." "message name" "message tel" "message button";
+            column-gap: 60px;
+        }
+
+        @media (min-width: $lg-width) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "message" "name" "tel" "button";
+        }
+
+        @media (min-width: $xl-width) {
+            row-gap: 20px;
+        }
+
+        & .form__field {
+            @media (min-width: $md-width) {
+                &--message {
+                    grid-area: message;
+                }
+    
+                &--name {
+                    grid-area: name;
+                }
+    
+                &--tel {
+                    grid-area: tel;
+                }
+            }            
+        }
+
+        & .form__button-submit {
+            @media (min-width: $md-width) {
+                grid-area: button;
+            }
+            
+        }
+
+
+    }
+    &__field {
+        width: 100%;
+    }
+
+    & textarea,
+    & input[type="text"],
+    & input[type="tel"] {
+        display: block;
+        width: 100%;
+        @include mp;
+        @include text-14;
+        padding: 12px;
+        border-color: $dark-gray;
+
+        &::placeholder {
+            font-family: inherit;
+        }
+    }
+
+    & textarea {
+        resize: vertical;
+    }
+
+    & input[type="text"],
+    & input[type="tel"] {
+        border: none;
+        border-bottom: 1px solid $dark-gray;
+    }
+}

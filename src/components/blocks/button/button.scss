@@ -16,14 +16,14 @@
   }
 
   &--main {
-    background-color: $main;
-    border-color: $main;
-    color: $text-black;
+    background-color: $maize;
+    border-color: $maize;
+    color: $black;
   }
 
   &--secondary {
     background-color: transparent;
-    border-color: $main;
+    border-color: $maize;
     color: $light-gray;
   }
 
