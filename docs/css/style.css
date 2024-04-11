@@ -5657,7 +5657,7 @@ picture {
     align-items: center;
   }
 
-  .partners .advantage {
+  .partners__advantages {
     margin-bottom: 30px;
   }
 
@@ -7412,6 +7412,7 @@ picture {
   .partners__advantages {
     position: relative;
     overflow: hidden;
+    margin-bottom: 60px;
   }
 
   .partners__advantages::before {
@@ -7433,7 +7434,6 @@ picture {
   .partners .advantage {
     position: relative;
     border-bottom: none;
-    margin-bottom: 60px;
   }
 
   .partners .advantage::before {

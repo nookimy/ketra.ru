@@ -262,9 +262,13 @@
     }
 
     &__advantages {
+        @media (min-width: $lg-width) {
+            margin-bottom: 30px;
+        }
         @media (min-width: $xl-width) {
             position: relative;
             overflow: hidden;
+            margin-bottom: 60px;
 
             &::before {
                 content: "";
@@ -300,14 +304,12 @@
             grid-template-columns: 1fr 1fr;
         }
 
-        @media (min-width: $lg-width) {
-            margin-bottom: 30px;
-        }
+        
 
         @media (min-width: $xl-width) {
             position: relative;
             border-bottom: none;
-            margin-bottom: 60px;
+
 
             &::before {
                 content: "";
