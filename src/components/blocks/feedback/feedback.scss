@@ -1,4 +1,5 @@
 .feedback {
+    border-bottom: 1px solid $dark-gray;
     & .page__subtitle {
         @media (min-width: $lg-width) {
             grid-area: title;

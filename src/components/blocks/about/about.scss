@@ -857,7 +857,7 @@
         }
     }
 
-    & .partners {
+    & .clients {
         position: relative;
 
         &::before {
@@ -904,6 +904,9 @@
             @include list;
             display: grid;
             grid-template-columns: 1fr 1fr;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
 
 
             @media (min-width: $md-width) {
@@ -912,6 +915,12 @@
 
             @media (min-width: $lg-width) {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            @media (min-width: $xl-width) {
+                left: 0;
+                transform: none;
+                width: 100%;
             }
 
             &::before {
@@ -1076,5 +1085,5 @@
                 object-position: center;
             }
         }
-    }
+    }    
 }

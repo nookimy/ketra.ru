@@ -55,7 +55,11 @@
                 border-left: 1px solid $dark-gray;
             }   
         }        
-    }    
+    }   
+    
+    &--transparent {
+        
+    }
 
     &__wrap {
         position: relative;
