@@ -1,0 +1,411 @@
+.contacts {
+    @media (min-width: $lg-width) {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100vw;
+            height: 1px;
+            background-color: $dark-gray;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__branch {
+        overflow: hidden;
+
+        
+
+        & .page__wrap {
+            padding-bottom: 0;
+            @media (min-width: $lg-width) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "info additional" "map map";
+
+                &::before,
+                &::after {
+                    z-index: 5;
+                }
+
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+        & .page__subtitle {
+            @media (min-width: $xl-width) {
+                padding-left: 0;
+
+                &::before {
+                    left: -30px;
+                }
+            }
+        }
+    }
+
+    & .branch {  
+        &--factory {
+            & .branch__info {
+                &::before {
+                    display: none;
+                }
+                @media (min-width: $lg-width) {
+                    padding-right: 0;
+                }
+            }
+            & .branch__additional {
+                padding: 0;
+                position: relative;
+                width: 100vw;
+                left: 50%;
+                transform: translateX(-50%);
+                aspect-ratio: 36 / 24;
+
+                @media (min-width: $lg-width) {
+                    align-self: unset;
+                    width: 100%;
+                    left: unset;
+                    transform: none;
+                    padding: 0;
+                }
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+
+                    @media (min-width: $lg-width) {
+                        margin-left: 25px;
+                        margin-bottom: 25px;
+                    }
+
+                    @media (min-width: $lg-width) {
+                        margin-left: 60px;
+                        margin-bottom: 60px;
+                        width: calc(100% - 60px);
+                    }
+                }
+            }
+        }      
+
+        &__info {
+            position: relative;
+            padding-bottom: 20px;
+
+            @media (min-width: $lg-width) {
+                grid-area: info;
+                padding-right: 25px;
+            }
+
+            @media (min-width: $xl-width) {
+                padding: 0 30px 60px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 100vw;
+                height: 1px;
+                background-color: $dark-gray;
+                transform: translateX(-50%);
+
+                @media (min-width: $lg-width) {
+                    width: 1px;
+                    height: calc(100% + 30px);
+                    left: unset;
+                    bottom: unset;
+                    top: -30px;
+                    right: 0;
+                    transform: none;
+                }
+
+                @media (min-width: $xl-width) {
+                    height: calc(100% + 60px);
+                    top: -60px;
+                }
+            }
+        }
+
+        &__additional {
+            padding-top: 20px;
+            padding-bottom: 30px;
+
+            @media (min-width: $lg-width) {
+                grid-area: additional;
+                align-self: self-end;
+                padding-left: 25px;
+                padding-top: 0;
+            }
+
+            @media (min-width: $xl-width) {
+                padding: 0 30px 60px 30px;
+            }
+
+            & .page__subtitle {
+                @media (min-width: $lg-width) {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__map {
+            position: relative;  
+            width: 100%;          
+            height: 250px;
+            z-index: 1;
+            
+            @media (min-width: $lg-width) {
+                height: 350px;
+            }
+
+            
+
+            & .map {
+                position: absolute;
+                width: 100vw;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: antiquewhite;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    width: 100vw;
+                    height: 1px;
+                    background-color: $dark-gray;
+                    transform: translateX(-50%);
+                }
+
+                &::before {
+                    top: 0;
+                }
+
+                &::after {
+                    bottom: 0;
+                }
+
+            }
+
+            @media (min-width: $lg-width) {
+                grid-area: map;
+            }
+        }
+    }
+
+    & p.address,
+    & p.phone-numbers {
+        @include mp;
+        margin-bottom: 10px
+    }
+
+    & .phone-numbers {
+        @include h3;        
+
+        &  a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    & .email {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    & .schedule {
+        & h3 {
+            @include mp;
+            @include h3;
+            margin-bottom: 10px;
+        }
+
+        & p {
+            @include mp;
+        }
+    }
+
+    &__tab-info {
+        @media (min-width: $xl-width) {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $dark-gray;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &::before {
+                top: 60px;
+            }
+
+            &::after {
+                bottom: 60px;
+            }
+        }
+
+        .tab {
+             padding-left: 25px;
+             padding-right: 25px;
+             overflow: scroll;
+             display: flex;
+             gap: 30px;
+             -ms-overflow-style: none;  /* IE и Edge */
+             scrollbar-width: none;  /* Firefox */
+             &::-webkit-scrollbar {
+                 display: none;
+             }
+ 
+             @media (min-width: $xl-width) {
+                 position: relative;
+                 flex-direction: column;
+                 align-items: flex-end;
+                 padding-left: 0;
+                 padding-right: 0;
+                 padding-top: 15px;
+                 padding-bottom: 15px;
+                 margin-bottom: 0;
+                 gap: 0;
+                 overflow: unset;
+
+                 &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: calc(100% + 165px);
+                    top: -60px;
+                    right: 0;
+                    background-color: $dark-gray;
+                 }
+             }
+         }        
+ 
+         .tab button {
+             position: relative;
+             float: left;
+             border: none;
+             outline: none;
+             cursor: pointer;
+             background-color: transparent;
+             padding: 15px 0;
+             transition: 0.3s;
+             @include subtitle;
+             box-sizing: border-box;
+             white-space: nowrap;
+ 
+             @media (min-width: $xl-width) {
+                 padding: 15px 30px;
+             }
+         }
+ 
+         /* Change background color of buttons on hover */
+         .tab button:hover {
+             color: $urobilin;
+         }
+ 
+         /* Create an active/current tablink class */
+         .tab button.active {
+             color: $urobilin;
+ 
+             &::before {
+                 content: "";
+                 position: absolute;
+                 bottom: -1px;
+                 left: 0;
+                 width: 100%;
+                 height: 4px;
+                 background-color: $urobilin;
+ 
+                 @media (min-width: $xl-width) {
+                     bottom: unset;
+                     left: unset;
+                     top: 50%;
+                     right: 0;
+                     width: 4px;
+                     height: 18px;
+                     transform: translateY(-50%);
+                 }
+             }
+         }
+ 
+         /* Style the tab content */
+         .tabcontent {
+             position: relative;
+             @include text-14;
+             display: none;
+             padding: 0 25px;
+             animation: fadeEffect 1s; /* Fading effect takes 1 second */
+             margin-top: 25px;
+ 
+             &::before {
+                 content: "";
+                 position: absolute;
+                 top: -25px;
+                 left: 50%;
+                 width: calc(100% - 50px);
+                 height: 1px;
+                 background-color: $dark-gray;
+                 transform: translateX(-50%);
+ 
+                 @media (min-width: $xl-width) {
+                     display: none;
+                     
+                 }
+             }
+ 
+             @media (min-width: $xl-width) {
+                 margin-top: 0;
+                 padding: 30px 30px 30px 0;
+             }
+ 
+             & h3 {
+                 @include mp;
+                 @include h3;
+             }
+ 
+         }
+ 
+         /* Go from zero to full opacity */
+         @keyframes fadeEffect {
+             from {opacity: 0;}
+             to {opacity: 1;}
+         }
+     }
+ 
+     &__tab-info .page__wrap {
+        padding-left: 0;
+        padding-right: 0;
+
+        @media (min-width: $xl-width) {
+            display: grid;
+            grid-template-columns: 400px auto;
+            column-gap: 30px;
+        }
+
+        &::after {
+            @media (min-width: $xl-width) {
+                display: block;
+            }
+        }
+     }
+}
