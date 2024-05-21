@@ -3983,6 +3983,360 @@ picture {
   background-color: #F1F1F1;
 }
 
+.vacancies .breadcrumbs {
+  position: relative;
+  z-index: 5;
+}
+
+.vacancies .breadcrumbs ul {
+  color: #F1F1F1;
+}
+
+.vacancies .breadcrumbs ul > li::before {
+  background-color: #F1F1F1;
+}
+
+.vacancies__header {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  overflow: hidden;
+  background-color: grey;
+  background-image: url("../img/vacancies/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.vacancies__header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(358.96deg, rgba(107, 55, 55, 0) 0.84%, #000000 99.07%);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.vacancies__header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 213px;
+  height: 100%;
+  left: 0px;
+  top: 1px;
+  background: linear-gradient(268.96deg, rgba(107, 55, 55, 0) 3.29%, rgba(0, 0, 0, 0.78) 99.07%);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.vacancies__header-text {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #F1F1F1;
+  position: relative;
+  z-index: 5;
+}
+
+.vacancies__header-text .title {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 38px;
+  line-height: 1.21;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  max-width: calc(100% - 70px);
+  margin-bottom: 0.52em;
+}
+
+.vacancies__header-text .text {
+  font-family: "NotoSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.38;
+  font-weight: 300;
+  font-style: normal;
+  max-width: calc(100% - 100px);
+}
+
+.vacancies__header-text .button-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.vacancies__header-text .button-wrap .button--secondary {
+  display: none;
+}
+
+.vacancies__header-request {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 5;
+}
+
+.vacancies__header-request .column--left {
+  display: none;
+}
+
+.vacancies__header-request .column--left .column__wrap {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: auto;
+}
+
+.vacancies__header-request .column--right {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 25px;
+}
+
+.vacancies__header-request .column--right p {
+  margin: 0;
+  padding: 0;
+}
+
+.vacancies__header-request .column--right .page__link-more {
+  margin-top: 10px;
+}
+
+.vacancies__header-request .column__wrap {
+  width: 100%;
+  max-width: 590px;
+}
+
+.vacancies__header-request h2 {
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  padding: 50px;
+}
+
+.vacancies__header-request picture {
+  display: none;
+}
+
+.vacancies__header-request img {
+  width: 100%;
+  max-width: 310px;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.vacancies__list-wrap {
+  position: relative;
+}
+
+.vacancies__list-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  background-color: #C8C8C8;
+  transform: translateX(-50%);
+}
+
+.vacancies__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.vacancies__item {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.vacancies__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #C8C8C8;
+  transform: translateX(-50%);
+}
+
+.vacancies__item--nav {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.vacancies__item--nav::before {
+  display: none;
+}
+
+.vacancies__item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.vacancies__item-link p {
+  margin: 0;
+  padding: 0;
+  font-family: "NotoSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.38;
+  font-weight: 300;
+  font-style: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 114px;
+}
+
+.vacancies__item-link p span {
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.38;
+  font-weight: 500;
+  font-style: normal;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.vacancies__video {
+  position: relative;
+  overflow: hidden;
+}
+
+.vacancies__video .video {
+  width: 100%;
+  height: 540px;
+  background-color: gray;
+}
+
+.vacancies__video .video__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  background-color: #FEC846;
+  border-radius: 50%;
+  background-image: url("../img/icons/play.svg");
+  background-repeat: no-repeat;
+  background-position: left 20px top 18px;
+  background-size: 28px 28px;
+}
+
+.vacancies__advantages {
+  position: relative;
+  background-image: url("../img/vacancies/advantages-bg.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+}
+
+.vacancies__advantages-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "NotoSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.38;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.vacancies__advantages-img {
+  aspect-ratio: 31/23;
+}
+
+.vacancies__advantages-img picture {
+  height: 100%;
+}
+
+.vacancies__advantages-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.vacancies-nav__pagination {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.vacancies-nav__pagination ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  display: flex;
+  color: #C8C8C8;
+}
+
+.vacancies-nav__pagination ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  padding: 5px;
+  transition: 0.4s;
+}
+
+.vacancies-nav__pagination ul > li > a:hover,
+.vacancies-nav__pagination ul > li > a:focus,
+.vacancies-nav__pagination ul > li > a:active {
+  color: #5C5C5C;
+}
+
+.vacancies-nav__pagination ul li.active > a {
+  color: #5C5C5C;
+}
+
 .contacts__branch {
   overflow: hidden;
 }
@@ -4856,6 +5210,34 @@ picture {
 
   .distributors__item:nth-child(odd) {
     background-color: #F1F1F1;
+  }
+
+  .vacancies__video .video {
+    height: unset;
+    aspect-ratio: 1237/600;
+  }
+
+  .vacancies__advantages-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img list";
+    gap: 40px;
+  }
+
+  .vacancies__advantages-list {
+    grid-area: list;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  .vacancies__advantages-img {
+    grid-area: img;
+  }
+
+  .vacancies__advantages-img {
+    aspect-ratio: unset;
+    height: 100%;
   }
 
   .form--feedback .form__field--message {
@@ -6064,6 +6446,52 @@ picture {
     height: calc(100% + 60px);
   }
 
+  .vacancies__header-text .text {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .vacancies__header-request .column {
+    width: 50%;
+  }
+
+  .vacancies__header-request .column--left {
+    order: 2;
+    display: block;
+    background-color: transparent;
+  }
+
+  .vacancies__header-request .column--right {
+    order: 1;
+    background: rgba(46, 46, 46, 0.7);
+    color: #F1F1F1;
+    display: flex;
+    align-items: center;
+  }
+
+  .vacancies__header-request .column--right .column__wrap {
+    margin-left: auto;
+  }
+
+  .vacancies__header-request .column__wrap {
+    max-width: 590px;
+  }
+
+  .vacancies__item-link p {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .vacancies__item-link p span {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .vacancies__advantages-list {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
   .contacts {
     position: relative;
   }
@@ -6312,6 +6740,31 @@ picture {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
+  }
+
+  .statistics .page__wrap > .vacancies__advantages-list {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .news .page__wrap > .vacancies__advantages-list {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .reviews--section .page__wrap > .vacancies__advantages-list {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .partners__benefits > .page__wrap > .vacancies__advantages-list {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
   }
 }
 
@@ -7418,6 +7871,12 @@ picture {
       -ms-grid-column: 2;
   }
 
+  .vacancies__advantages-img {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 1;
+  }
+
   .tests__list li > .statistics__text {
       -ms-grid-row: 2;
       -ms-grid-column: 2;
@@ -7934,6 +8393,197 @@ picture {
     height: 600px;
   }
 
+  .vacancies .breadcrumbs::before {
+    display: none;
+  }
+
+  .vacancies__header-text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .vacancies__header-text .title,
+  .vacancies__header-text .text {
+    max-width: calc(100% - 105px);
+  }
+
+  .vacancies__header-text .title {
+    font-size: 54px;
+    line-height: 1.48;
+  }
+
+  .vacancies__header-text .title {
+    font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 64px;
+    line-height: 1.16;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-bottom: 0.46em;
+  }
+
+  .vacancies__header-text .button-wrap .button--secondary {
+    display: flex;
+  }
+
+  .vacancies__header-request .column--right {
+    padding: 20px 30px;
+  }
+
+  .vacancies__header-request picture {
+    width: 100%;
+    display: block;
+  }
+
+  .vacancies__list-wrap::before {
+    top: 60px;
+  }
+
+  .vacancies__list-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: #C8C8C8;
+    transform: translateX(-50%);
+  }
+
+  .vacancies__list-wrap .page__wrap {
+    padding-bottom: 60px;
+  }
+
+  .vacancies__list-wrap .page__wrap::after {
+    display: block;
+  }
+
+  .vacancies__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .vacancies__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #C8C8C8;
+  }
+
+  .vacancies__item {
+    padding: 30px;
+  }
+
+  .vacancies__item--nav {
+    justify-content: center;
+  }
+
+  .vacancies__item--nav::after {
+    display: none;
+  }
+
+  .vacancies__item--nav .vacancies-nav__pagination {
+    display: none;
+  }
+
+  .vacancies__item-link p {
+    font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+    font-size: 16px;
+    line-height: 1.1;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.2;
+    max-height: unset;
+    height: 88px;
+    -webkit-line-clamp: 4;
+  }
+
+  .vacancies__item-link p span {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .vacancies__video {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 60px;
+  }
+
+  .vacancies__video::before,
+  .vacancies__video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #C8C8C8;
+  }
+
+  .vacancies__video::before {
+    left: 30px;
+  }
+
+  .vacancies__video::after {
+    right: 30px;
+  }
+
+  .vacancies__video .video__play-btn {
+    width: 100px;
+    height: 100px;
+    background-position: left 37px top 35px;
+  }
+
+  .vacancies__advantages::before,
+  .vacancies__advantages::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: #C8C8C8;
+    transform: translateX(-50%);
+  }
+
+  .vacancies__advantages::before {
+    top: 0;
+  }
+
+  .vacancies__advantages::after {
+    bottom: 0;
+  }
+
+  .vacancies__advantages .page__wrap {
+    padding-bottom: 60px;
+  }
+
+  .vacancies__advantages .page__wrap::after {
+    display: block;
+  }
+
+  .vacancies__advantages-wrap {
+    gap: 270px;
+    align-items: center;
+  }
+
+  .vacancies__advantages-list {
+    padding-right: 60px;
+  }
+
+  .vacancies__advantages-img {
+    aspect-ratio: 31/23;
+    height: unset;
+  }
+
   .contacts__branch .page__subtitle {
     padding-left: 0;
   }
@@ -8211,7 +8861,7 @@ picture {
 
 @media (min-width: 1024px){
 
-  .statistics__list {
+  .statistics .page__wrap > .statistics__list {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -8236,7 +8886,7 @@ picture {
     -ms-grid-column-span: 1;
   }
 
-  .news__list {
+  .statistics .page__wrap > .news__list {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -8271,7 +8921,7 @@ picture {
     -ms-grid-column: 3;
   }
 
-  .reviews__list {
+  .statistics .page__wrap > .reviews__list {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -8338,7 +8988,7 @@ picture {
     -ms-grid-column: 1;
   }
 
-  .partners__benefits ol {
+  .statistics .page__wrap > ol {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -8386,7 +9036,7 @@ picture {
     -ms-grid-column: 2;
   }
 
-  .production__list {
+  .statistics .page__wrap > .production__list {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -8411,7 +9061,7 @@ picture {
     -ms-grid-column-span: 1;
   }
 
-  .counter__list {
+  .statistics .page__wrap > .counter__list {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -8444,6 +9094,41 @@ picture {
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
   }
+
+  .vacancies__advantages-list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .statistics__list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .news__list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .reviews__list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .partners__benefits ol {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .production__list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .counter__list {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
 }
 
 @media (min-width: 1200px) and (min-width: 1200px) {
@@ -8453,6 +9138,11 @@ picture {
   }
 
   .partners__video {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .vacancies__video {
     padding-left: 30px;
     padding-right: 30px;
   }
