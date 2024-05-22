@@ -16,42 +16,113 @@
             }
         }
 
-    }
-
-
-    & .page__wrap {
-
-        @media (min-width: $lg-width) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "title link-more" "list list";
-            column-gap: 100px;
-            row-gap: 60px;
+        & .page__wrap {
+            @media (min-width: $lg-width) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "title link-more" "list list";
+                column-gap: 100px;
+                row-gap: 60px;
+            }
+    
+            @media (min-width: $xl-width) {
+                grid-template-columns: 1fr 560px;
+                column-gap: 200px;
+                padding-bottom: 0;
+    
+                &::after {
+                    display: block;
+                }
+            }
         }
 
-        @media (min-width: $xl-width) {
-            grid-template-columns: 1fr 560px;
-            column-gap: 200px;
-            padding-bottom: 0;
-
-            &::after {
-                display: block;
+        & .page__subtitle {
+            @media (min-width: $lg-width) {
+                margin-bottom: 0;
+                
             }
         }
     }
 
-    & .page__subtitle {
-        @media (min-width: $lg-width) {
-            margin-bottom: 0;
-            grid-area: title;
+    &--page {
+        & .page__wrap {    
+            @media (min-width: $xl-width) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "title title" "list list" "pagination link";
+    
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+        & .page__link-more {
+            color: $black;
+            @media (min-width: $xl-width) {
+                grid-area: link;
+            }
+        }
+
+        & .news-nav__pagination {
+            display: none;
+            @media (min-width: $xl-width) {
+                display: flex;
+                grid-area: pagination;
+            }
+        }
+
+        & .news__list {
+
+            margin-bottom: 30px;
+
+        }
+
+        & .news__item {
+            @media (min-width: $xl-width) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $dark-gray;
+                }
+            }
         }
     }
 
-    &__list {
+    & .page__wrap {
+        &::after {
+            display: block;
+        }
+    }
+
+    & .page__subtitle {
+        grid-area: title;
+    }
+
+    & .page__link-more {
+        margin-top: 30px;
+
+        @media (min-width: $lg-width) {
+            justify-self: end;
+            align-self: center;
+            margin-top: 0;
+            grid-area: link-more;
+        }
+
+        @media (min-width: $xl-width) {
+            margin-right: 30px;
+        }
+    }
     
+
+    &__list {    
         @include list;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 30px;
 
         @media (min-width: $lg-width) {
@@ -85,12 +156,11 @@
         }
     }
 
-    &__item {
-        position: relative;
+    &__item {        
         overflow: hidden;
+        position: relative;
 
         @media (min-width: $xl-width) {
-
             &:nth-child(3) {
                 &::before {
                     display: none;
@@ -117,7 +187,17 @@
             }
         }
 
+        
+    }
+
+    &__item.article {
+        &:nth-child(even) {
+            
+        }
+            
+
         & a {
+            position: relative;
             color: inherit;
             text-decoration: none;
             display: flex;
@@ -133,7 +213,56 @@
             }
         }
 
-        & time {
+        & .article__img {
+            @media (max-width: 1199px) {
+                display: none;
+            }
+            position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                }  
+                
+                & picture {
+                    width: 100%;
+                    height: 100%
+                }
+    
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: unset;
+                }     
+
+            
+
+            
+            
+
+        }
+
+        & time,
+        & .article__date,
+        & h3,
+        & p {
+            position: relative;
+            z-index: 5;
+        }
+
+        & time,
+        & .article__date {
             @include mp;
             @include text;
             color: $dark-gray;
@@ -146,9 +275,7 @@
         }
 
         & p {
-            display: none;
-            
-            
+            display: none;            
 
             @media (min-width: $xl-width) {
                 position: relative;
@@ -188,27 +315,67 @@
                     &::before,
                     &::after {
                         transform: translateX(0);
-                }
+                    }
                     
                 }
             }
         }
-    }
+    }   
 
-    & .page__link-more {
-        margin-top: 30px;
 
-        @media (min-width: $lg-width) {
-            justify-self: end;
-            align-self: center;
-            margin-top: 0;
-            grid-area: link-more;
-        }
+}
 
+.news-nav {
+    &__pagination {
         @media (min-width: $xl-width) {
-            margin-right: 30px;
-        }
+            display: flex;
+            align-items: stretch;
+            gap: 30px;
+            margin-left: 30px;
+
+            & ul {
+                @include list;
+                @include link;
+                display: flex;
+                color: $dark-gray;
+        
+                & > li > a {
+                    color: inherit;
+                    text-decoration: none;
+                    padding: 5px;
+                    transition: $transition;
+        
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $gray; 
+                    }
+                }
+        
+                li.active {
+                    & > a {
+                        color: $gray; 
+                    }                    
+                }
+            }            
+        }        
     }
 
+    &__button {
+        @include btn-reset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        & .icon {
+            width: 15px;
+            height: 15px;
+    
+            & use.icon__symbol {
+              fill: $gray;
+            }
+          }
+    } 
+
+    
 }

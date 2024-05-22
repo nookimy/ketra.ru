@@ -1,30 +1,57 @@
 <section class="news news--section">
     <div class="page__wrap">
         <h2 class="page__subtitle">Жить развиваясь</h2>
+        <!--Нужно написать скрипт, который при разрешении >=1200px в списке .news__list будет искать четные элементы .news__item  и, если есть изображение, добавлять его и заголовок h3 окрашивать в белый, а если элемент нечетный или четный, но без изображения, то не показывать изображение и не менять цвет h3-->
         <ul class="news__list">
-            <li class="news__item">
-                <a href="#">
-                    <time class="news__date" datetime="2023-12-06">06.12.2023</time>
+            <li class="news__item article">
+                <a href="article.html">
+                    <div class="article__img">
+                        <picture>
+                            <source type="image/webp" srcset="
+                                ../news/image1-415@1x.webp 1x,
+                                ../news/image1-415@2x.webp 2x,
+                                ../news/image1-415@3x.webp 3x">
+                            <source type="image/jpeg" srcset="
+                                ../news/image1-415@1x.jpg 1x,
+                                ../news/image1-415@2x.jpg 2x,
+                                ../news/image1-415@3x.jpg 3x">
+                            <img src="../news/image1.jpg" alt="">
+                        </picture>
+                    </div>
+                    <time class="article__date" datetime="2023-12-06">06.12.2023</time>
                     <h3>Что необходимо учесть при строительстве дома зимой</h3>
                     <p>Читать статью</p>
                 </a>
             </li>
-            <li class="news__item">
-                <a href="#">
-                    <time class="news__date" datetime="2023-11-28">28.11.2023</time>
+            <li class="news__item article">
+                <div class="article__img">
+                    <picture>
+                        <source type="image/webp" srcset="
+                            ../news/image1-415@1x.webp 1x,
+                            ../news/image1-415@2x.webp 2x,
+                            ../news/image1-415@3x.webp 3x">
+                        <source type="image/jpeg" srcset="
+                            ../news/image1-415@1x.jpg 1x,
+                            ../news/image1-415@2x.jpg 2x,
+                            ../news/image1-415@3x.jpg 3x">
+                        <img src="../news/image1.jpg" alt="">
+                    </picture>
+                </div>
+                <a href="article.html">
+                    <time class="article__date" datetime="2023-11-28">28.11.2023</time>
                     <h3>Продкуция "Кетра" для тех, кто ценит качесвто</h3>
                     <p>Читать статью</p>
                 </a>
             </li>
-            <li class="news__item">
-                <a href="#">
-                    <time class="news__date" datetime="2023-11-24">24.11.2023</time>
+            <li class="news__item article">
+                <a href="article.html">
+                    <time class="article__date" datetime="2023-11-24">24.11.2023</time>
                     <h3>Выбор застройщиков Марий Эл</h3>
                     <p>Читать статью</p>
                 </a>
             </li>
         </ul>
-        <a class="page__link-more" href="#">
+        <a class="page__link-more" href="/novosti.html">
             Читать все новости
             <svg class="icon" width="14px" height="9px" fill="none">
                 <use class="icon__symbol" xlink:href="#icon-arrow-up-outline"></use>
