@@ -1,0 +1,99 @@
+.article {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 100vw;
+        height: 1px;
+        background-color: $dark-gray;
+        transform: translateX(-50%);
+    }
+
+    @media (min-width: $xl-width) {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 100vw;
+            height: 1px;
+            background-color: $dark-gray;
+            transform: translateX(-50%);
+        } 
+    }
+
+    & .page__wrap {
+        padding-left: 0;
+        padding-right: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+
+        @media (min-width: $lg-width) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "title title" "img text";
+        }
+
+        @media (min-width: $xl-width) {
+            padding-left: 30px;
+        padding-right: 30px;
+            grid-template-areas: "title img" ". text";
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    & .page__title {
+        @media (min-width: $lg-width) {
+            grid-area: title;
+        }
+
+        @media (min-width: $xl-width) {
+
+        }
+    }
+
+    &__img,
+    &__text {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        @media (min-width: $xl-width) {
+            padding-left: 0;
+            padding-right: 30px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 31 / 23;
+        overflow: hidden;
+
+        @media (min-width: $lg-width) {
+            grid-area: img;
+        }
+
+        picture {
+            width: 100%;
+            height: 100%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__text {
+        @media (min-width: $lg-width) {
+            grid-area: text;
+        }
+    }
+}

@@ -44,6 +44,18 @@
         }
     }
 
+    &--other {
+        & .news__list {
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: $xl-width) {
+            & .page__link-more {
+                margin-left: 30px;
+            }
+        }
+    }
+
     &--page {
         & .page__wrap {    
             @media (min-width: $xl-width) {
