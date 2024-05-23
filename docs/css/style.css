@@ -843,10 +843,31 @@ picture {
 }
 
 .production {
-  background-image: url("../img/production/production-bg.png");
+  position: relative;
+  overflow: hidden;
+}
+
+.production::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
+  background-image: url("../img/production/production-bg-2000.jpg");
+  background-image: -webkit-image-set(url("../img/production/production-bg-2000.jpg") 1x, url("../img/production/production-bg-2000.jpg") 2x, url("../img/production/production-bg-2000.jpg") 3x);
+  background-image: image-set("../img/production/production-bg-2000.jpg" 1x, "../img/production/production-bg-2000.jpg" 2x, "../img/production/production-bg-2000.jpg" 3x);
+}
+
+.webp .production::before {
+  background-image: url("../img/production/production-bg-2000.webp");
+  background-image: -webkit-image-set(url("../img/production/production-bg-2000.webp") 1x, url("../img/production/production-bg-2000.webp") 2x, url("../img/production/production-bg-2000.webp") 3x);
+  background-image: image-set("../img/production/production-bg-2000.webp" 1x, "../img/production/production-bg-2000.webp" 2x, "../img/production/production-bg-2000.webp" 3x);
 }
 
 .production__title {

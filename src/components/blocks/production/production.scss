@@ -1,8 +1,40 @@
 .production {
-    background-image: url("../production/production-bg.png");
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;        
+        z-index: -1; 
+        opacity: 0.1;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+        background-image: url("../production/production-bg-2000.jpg");
+        background-image: image-set(
+            "../production/production-bg-2000.jpg" 1x,
+            "../production/production-bg-2000.jpg" 2x,
+            "../production/production-bg-2000.jpg" 3x
+        );
+    }
+
+    .webp & {
+        &::before {
+        background-image: url("../production/production-bg-2000.webp");
+        background-image: image-set(
+            "../production/production-bg-2000.webp" 1x,
+            "../production/production-bg-2000.webp" 2x,
+            "../production/production-bg-2000.webp" 3x
+            );
+        }
+    }
+
+
+    
 
     & .page__wrap {
         @media (min-width: $xl-width) {
