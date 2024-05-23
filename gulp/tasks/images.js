@@ -51,6 +51,7 @@ export const img = (done) => {
                 }))
             )
 
+
             .pipe(responsive(config, {
                 errorOnEnlargement: false,
                 quality: 80,
@@ -65,6 +66,7 @@ export const img = (done) => {
     });
     done();
 }
+
 
 
 

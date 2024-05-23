@@ -187,22 +187,6 @@ function projectsSliderResize () {
 
   }
 }
-let productionProjectsSlide = document.querySelector('.projects__slide.production');
-let consultProjectsSlide = document.querySelector('.projects__slide.consult');
-let projectProjectsSlide = document.querySelectorAll('.projects__slide.project');
-
-console.log(projectProjectsSlide.length);
-
-if (viewPortWidth < 1024 || projectProjectsSlide.length >= 3) {
-    productionProjectsSlide.style.display = "none";
-    consultProjectsSlide.style.display = "none";
-} else if (projectProjectsSlide.length = 2) {
-    productionProjectsSlide.style.display = "none";
-    consultProjectsSlide.style.display = "block";
-} else if (projectProjectsSlide.length = 1) {
-    productionProjectsSlide.style.display = "block";
-    consultProjectsSlide.style.display = "block";
-}
 
 
 window.addEventListener('resize', certSliderResize, regionsSliderResize, projectsSliderResize);
