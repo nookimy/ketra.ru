@@ -1,6 +1,8 @@
 .contacts {
+    
     @media (min-width: $lg-width) {
         position: relative;
+        overflow: hidden;
 
         &::before {
             content: "";

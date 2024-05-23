@@ -718,6 +718,7 @@
 }
 
 .distributors {
+    overflow: hidden;
     position: relative;
 
     &::before {

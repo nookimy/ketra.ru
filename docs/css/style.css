@@ -3445,6 +3445,7 @@ picture {
 
 .about .clients {
   position: relative;
+  overflow: hidden;
 }
 
 .about .clients::before {
@@ -3920,6 +3921,7 @@ picture {
 }
 
 .distributors {
+  overflow: hidden;
   position: relative;
   /* Go from zero to full opacity */
 }
@@ -4291,6 +4293,7 @@ picture {
 
 .vacancies__list-wrap {
   position: relative;
+  overflow: hidden;
 }
 
 .vacancies__list-wrap::before {
@@ -6657,6 +6660,7 @@ picture {
 
   .contacts {
     position: relative;
+    overflow: hidden;
   }
 
   .contacts::before {
