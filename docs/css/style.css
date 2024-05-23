@@ -860,14 +860,14 @@ picture {
   background-position: top right;
   background-size: cover;
   background-image: url("../img/production/production-bg-2000.jpg");
-  background-image: -webkit-image-set(url("../img/production/production-bg-2000.jpg") 1x, url("../img/production/production-bg-2000.jpg") 2x, url("../img/production/production-bg-2000.jpg") 3x);
-  background-image: image-set("../img/production/production-bg-2000.jpg" 1x, "../img/production/production-bg-2000.jpg" 2x, "../img/production/production-bg-2000.jpg" 3x);
+  background-image: -webkit-image-set(url("../img/production/production-bg-2000.jpg") 1x, url("../img/production/production-bg-2000@2x.jpg") 2x, url("../img/production/production-bg-2000@3x.jpg") 3x);
+  background-image: image-set("../img/production/production-bg-2000.jpg" 1x, "../img/production/production-bg-2000@2x.jpg" 2x, "../img/production/production-bg-2000@3x.jpg" 3x);
 }
 
 .webp .production::before {
   background-image: url("../img/production/production-bg-2000.webp");
-  background-image: -webkit-image-set(url("../img/production/production-bg-2000.webp") 1x, url("../img/production/production-bg-2000.webp") 2x, url("../img/production/production-bg-2000.webp") 3x);
-  background-image: image-set("../img/production/production-bg-2000.webp" 1x, "../img/production/production-bg-2000.webp" 2x, "../img/production/production-bg-2000.webp" 3x);
+  background-image: -webkit-image-set(url("../img/production/production-bg-2000.webp") 1x, url("../img/production/production-bg-2000@2x.webp") 2x, url("../img/production/production-bg-2000@3x.webp") 3x);
+  background-image: image-set("../img/production/production-bg-2000.webp" 1x, "../img/production/production-bg-2000@2x.webp" 2x, "../img/production/production-bg-2000@3x.webp" 3x);
 }
 
 .production__title {
@@ -1250,12 +1250,20 @@ picture {
   width: 882px;
   height: 508px;
   z-index: 10;
-  background-image: url("../img/geography/map.png");
   background-size: contain;
   background-position: center;
+  background-image: url("../img/geography/map-882.png");
+  background-image: -webkit-image-set(url("../img/geography/map-882.png") 1x, url("../img/geography/map-882@2x.png") 2x, url("../img/geography/map-882@3x.png") 3x);
+  background-image: image-set("../img/geography/map-882.png" 1x, "../img/geography/map-882@2x.png" 2x, "../img/geography/map-882@3x.png" 3x);
 }
 
-.geography__map img {
+.webp .geography__map {
+  background-image: url("../img/geography/map-882.webp");
+  background-image: -webkit-image-set(url("../img/geography/map-882.webp") 1x, url("../img/geography/map-882@2x.webp") 2x, url("../img/geography/map-882@3x.webp") 3x);
+  background-image: image-set("../img/geography/map-882.webp" 1x, "../img/geography/map-882@2x.webp" 2x, "../img/geography/map-882@3x.webp" 3x);
+}
+
+.geography__map .region-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;

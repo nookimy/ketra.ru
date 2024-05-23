@@ -194,6 +194,8 @@
     cursor: pointer;
 }
 
+
+
 @mixin main-shadow {
     filter: drop-shadow(0px 20px 70px rgba(51, 102, 153, 0.57));
 }
@@ -205,4 +207,6 @@
 @mixin gradient-new {
     background: linear-gradient(89.77deg, #D9D9D9 0.14%, #CFFFC7 99.77%);
 }
+
+
 
