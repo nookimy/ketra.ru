@@ -233,6 +233,9 @@
         }
 
         & .partners__logo {
+            & .logo {
+                font-size: 21px;
+            }
             @media (min-width: $md-width) {
                 grid-area: logo;
                 display: flex;

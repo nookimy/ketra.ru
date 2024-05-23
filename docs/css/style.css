@@ -636,6 +636,7 @@ picture {
   text-decoration: none;
   display: inline-flex;
   flex-direction: row;
+  align-items: center;
   font-size: 12px;
 }
 
@@ -3745,6 +3746,10 @@ picture {
 .partners__factory .page__wrap > p {
   margin: 0;
   padding: 0;
+}
+
+.partners__factory .partners__logo .logo {
+  font-size: 21px;
 }
 
 .partners__factory h2 {
