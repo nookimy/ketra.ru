@@ -395,7 +395,6 @@
                     & img {
                         object-fit: contain;
                         object-position: center;
-                        border: 1px solid;
                     }
     
                     & .best {
@@ -428,7 +427,9 @@
             }
 
             
-        
+            & picture {
+                height: 100%;
+            }
 
             & img {
                 display: block;

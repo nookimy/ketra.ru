@@ -202,6 +202,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  /*outline: 1px solid red;*/
 }
 
 body {
@@ -3782,6 +3783,10 @@ picture {
   width: 100%;
 }
 
+.partners .advantage__img picture {
+  height: 100%;
+}
+
 .partners .advantage__img img {
   display: block;
   width: 100%;
@@ -6510,7 +6515,6 @@ picture {
        object-fit: contain;
     -o-object-position: center;
        object-position: center;
-    border: 1px solid;
   }
 
   .partners .advantage--awards .signs .best {

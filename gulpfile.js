@@ -25,6 +25,7 @@ import  { copycss } from "./gulp/tasks/copy.js";
 import  { js } from "./gulp/tasks/js.js";
 import  { copyjs } from "./gulp/tasks/copy.js";
 import  { img } from "./gulp/tasks/images.js";
+import  { copyimg } from "./gulp/tasks/copy.js";
 import  { imgopt } from "./gulp/tasks/images.js";
 import  { copysvg } from "./gulp/tasks/images.js";
 import  { svgOpt } from "./gulp/tasks/svg.js";
@@ -53,9 +54,12 @@ const mainTasks = gulp.series(svg, gulp.parallel(copycss, copyjs, html, scss, js
 // Построение сценариев выполнения задач
 const dev = gulp.series(mainTasks, gulp.parallel(watcher, server));
 
+const test = gulp.series(copyimg);
+
 //Экспорт сценариев
 export { fonts }
 export { dev }
+export { test }
 
 
 //Выполнение сценария по умолчанию

@@ -32,6 +32,7 @@ export const path = {
         jslib: basePath.src + '/js-lib/*.*',
         images: basePath.src + '/img/**/*.{jpg,jpeg,png}',
         imgOpt: basePath.src + '/img-optimized/', // Оптимизированные изображения (jpg,jpeg,png}
+        imgOptPartners: basePath.src + '/img-optimized/partners/',
         fonts: basePath.src + '/fonts/',
 
         svg: basePath.blocks + '/**/*.svg',
@@ -46,6 +47,7 @@ export const path = {
         css: basePath.dev + '/css/',
         js: basePath.dev + '/js/',
         images: basePath.dev + '/img/',
+        imagesPartners: basePath.dev + '/img/partners/',
         fonts: basePath.dev + '/fonts/',
         files: basePath.dev + '/files/',
     },

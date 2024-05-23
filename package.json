@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "fonts": "gulp fonts"
+    "fonts": "gulp fonts",
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
