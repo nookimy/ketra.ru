@@ -166,7 +166,7 @@
 
     @media (min-width: $lg-width) {
       display: none;
-      padding: 0 20px;
+      padding: 0;
       margin-bottom: 30px;
     }
   
@@ -276,6 +276,10 @@
 
   &__slider {
     @include list;
+    @media (min-width: $lg-width) {
+      display: flex;
+    }
+    
   }
 
   &__slide {

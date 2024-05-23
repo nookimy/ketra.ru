@@ -1554,11 +1554,25 @@ picture {
   position: relative;
   background-color: #000000;
   color: #F1F1F1;
-  background-image: url("../img/statistics/statistics-bg.jpg");
+  background-image: url("../img/statistics/statistics-bg-2000.jpg");
+  background-image: -webkit-image-set(url("../img/statistics/statistics-bg-2000.jpg") 1x, url("../img/statistics/statistics-bg-2000@2x.jpg") 2x, url("../img/statistics/statistics-bg-2000@3x.jpg") 3x);
+  background-image: image-set("../img/statistics/statistics-bg-2000.jpg" 1x, "../img/statistics/statistics-bg-2000@2x.jpg" 2x, "../img/statistics/statistics-bg-2000@3x.jpg" 3x);
   background-repeat: no-repeat;
   background-position: top 0px left -50px;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.webp .statistics {
+  background-image: url("../img/statistics/statistics-bg-2000.webp");
+  background-image: -webkit-image-set(url("../img/statistics/statistics-bg-2000.webp") 1x, url("../img/statistics/statistics-bg-2000@2x.webp") 2x, url("../img/statistics/statistics-bg-2000@3x.webp") 3x);
+  background-image: image-set("../img/statistics/statistics-bg-2000.webp" 1x, "../img/statistics/statistics-bg-2000@2x.webp" 2x, "../img/statistics/statistics-bg-2000@3x.webp" 3x);
+}
+
+.webp .statistics::before {
+  background-image: url("../img/statistics/noize-2000.webp");
+  background-image: -webkit-image-set(url("../img/statistics/noize-2000.webp") 1x, url("../img/statistics/noize-2000@2x.webp") 2x, url("../img/statistics/noize-2000@3x.webp") 3x);
+  background-image: image-set("../img/statistics/noize-2000.webp" 1x, "../img/statistics/noize-2000@2x.webp" 2x, "../img/statistics/noize-2000@3x.webp" 3x);
 }
 
 .statistics::before {
@@ -1568,7 +1582,9 @@ picture {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/page/noize.png");
+  background-image: url("../img/statistics/noize-2000.png");
+  background-image: -webkit-image-set(url("../img/statistics/noize-2000.png") 1x, url("../img/statistics/noize-2000@2x.png") 2x, url("../img/statistics/noize-2000@3x.png") 3x);
+  background-image: image-set("../img/statistics/noize-2000.png" 1x, "../img/statistics/noize-2000@2x.png" 2x, "../img/statistics/noize-2000@3x.png" 3x);
   background-repeat: repeat;
   opacity: 0.5;
 }
@@ -3044,11 +3060,31 @@ picture {
 }
 
 .counter {
+  position: relative;
   overflow: hidden;
-  background-image: url("../img/product/product-bg.png");
+}
+
+.counter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
+  background-image: url("../img/counter/production-bg-2000.jpg");
+  background-image: -webkit-image-set(url("../img/counter/production-bg-2000.jpg") 1x, url("../img/counter/production-bg-2000@2x.jpg") 2x, url("../img/counter/production-bg-2000@3x.jpg") 3x);
+  background-image: image-set("../img/counter/production-bg-2000.jpg" 1x, "../img/counter/production-bg-2000@2x.jpg" 2x, "../img/counter/production-bg-2000@3x.jpg" 3x);
+}
+
+.webp .counter::before {
+  background-image: url("../img/counter/production-bg-2000.webp");
+  background-image: -webkit-image-set(url("../img/counter/production-bg-2000.webp") 1x, url("../img/counter/production-bg-2000@2x.webp") 2x, url("../img/counter/production-bg-2000@3x.webp") 3x);
+  background-image: image-set("../img/counter/production-bg-2000.webp" 1x, "../img/counter/production-bg-2000@2x.webp" 2x, "../img/counter/production-bg-2000@3x.webp" 3x);
 }
 
 .counter .page__subtitle {
@@ -3592,8 +3628,9 @@ picture {
   margin: 0 auto;
   min-height: calc(100vh - 120px);
   overflow: hidden;
-  background-color: grey;
-  background-image: url("../img/partners/banner.jpg");
+  background-image: url("../img/partners/banner-2000.jpg");
+  background-image: -webkit-image-set(url("../img/partners/banner-2000.jpg") 1x, url("../img/partners/banner-2000@2x.jpg") 2x, url("../img/partners/banner-2000@3x.jpg") 3x);
+  background-image: image-set("../img/partners/banner-2000.jpg" 1x, "../img/partners/banner-2000@2x.jpg" 2x, "../img/partners/banner-2000@3x.jpg" 3x);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -3624,6 +3661,12 @@ picture {
   background: linear-gradient(268.96deg, rgba(107, 55, 55, 0) 3.29%, rgba(0, 0, 0, 0.78) 99.07%);
   opacity: 0.7;
   z-index: 1;
+}
+
+.webp .partners__header {
+  background-image: url("../img/partners/banner-2000.webp");
+  background-image: -webkit-image-set(url("../img/partners/banner-2000.webp") 1x, url("../img/partners/banner-2000@2x.webp") 2x, url("../img/partners/banner-2000@3x.webp") 3x);
+  background-image: image-set("../img/partners/banner-2000.webp" 1x, "../img/partners/banner-2000@2x.webp" 2x, "../img/partners/banner-2000@3x.webp" 3x);
 }
 
 .partners .breadcrumbs {
@@ -4183,8 +4226,9 @@ picture {
   margin: 0 auto;
   min-height: calc(100vh - 120px);
   overflow: hidden;
-  background-color: grey;
-  background-image: url("../img/vacancies/banner.jpg");
+  background-image: url("../img/vacancies/banner-2000.jpg");
+  background-image: -webkit-image-set(url("../img/vacancies/banner-2000.jpg") 1x, url("../img/vacancies/banner-2000@2x.jpg") 2x, url("../img/vacancies/banner-2000@3x.jpg") 3x);
+  background-image: image-set("../img/vacancies/banner-2000.jpg" 1x, "../img/vacancies/banner-2000@2x.jpg" 2x, "../img/vacancies/banner-2000@3x.jpg" 3x);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -4215,6 +4259,12 @@ picture {
   background: linear-gradient(268.96deg, rgba(107, 55, 55, 0) 3.29%, rgba(0, 0, 0, 0.78) 99.07%);
   opacity: 0.7;
   z-index: 1;
+}
+
+.webp .vacancies__header {
+  background-image: url("../img/vacancies/banner-2000.webp");
+  background-image: -webkit-image-set(url("../img/vacancies/banner-2000.webp") 1x, url("../img/vacancies/banner-2000@2x.webp") 2x, url("../img/vacancies/banner-2000@3x.webp") 3x);
+  background-image: image-set("../img/vacancies/banner-2000.webp" 1x, "../img/vacancies/banner-2000@2x.webp" 2x, "../img/vacancies/banner-2000@3x.webp" 3x);
 }
 
 .vacancies__header-text {
@@ -4444,10 +4494,8 @@ picture {
 
 .vacancies__advantages {
   position: relative;
-  background-image: url("../img/vacancies/advantages-bg.png");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: cover;
+  overflow: hidden;
+  background-image: url("../img/vacancies/advantages-bg-2000.png");
 }
 
 .vacancies__advantages-list {
@@ -5627,8 +5675,12 @@ picture {
 
   .geography__projects {
     display: none;
-    padding: 0 20px;
+    padding: 0;
     margin-bottom: 30px;
+  }
+
+  .projects__slider {
+    display: flex;
   }
 
   .projects__slide {
@@ -8117,12 +8169,7 @@ picture {
     justify-items: start;
     -moz-column-gap: 40px;
          column-gap: 40px;
-  }
-
-  .counter .page__wrap::after {
-    display: block;
-    bottom: 30px;
-    height: 100px;
+    padding-bottom: 0;
   }
 
   .counter .page__subtitle {

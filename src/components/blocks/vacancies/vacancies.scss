@@ -28,8 +28,12 @@
         margin: 0 auto;
         min-height: calc(100vh - 120px);
         overflow: hidden;
-        background-color: grey;
-        background-image: url("../vacancies/banner.jpg");
+        background-image: url("../vacancies/banner-2000.jpg");
+        background-image: image-set(
+            "../vacancies/banner-2000.jpg" 1x,
+            "../vacancies/banner-2000@2x.jpg" 2x,
+            "../vacancies/banner-2000@3x.jpg" 3x
+        );
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -61,6 +65,17 @@
             opacity: 0.7;
             z-index: 1;
 
+        }
+    }
+
+    .webp & {
+        &__header {
+            background-image: url("../vacancies/banner-2000.webp");
+            background-image: image-set(
+                "../vacancies/banner-2000.webp" 1x,
+                "../vacancies/banner-2000@2x.webp" 2x,
+                "../vacancies/banner-2000@3x.webp" 3x
+            );
         }
     }
 
@@ -427,10 +442,9 @@
 
     &__advantages {
         position: relative;
-        background-image: url("../vacancies/advantages-bg.png");
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: cover;
+        overflow: hidden;
+        background-image: url("../vacancies/advantages-bg-2000.png");
+        
 
         @media (min-width: $xl-width) {
             &::before,

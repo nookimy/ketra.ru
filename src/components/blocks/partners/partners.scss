@@ -5,8 +5,12 @@
         margin: 0 auto;
         min-height: calc(100vh - 120px);
         overflow: hidden;
-        background-color: grey;
-        background-image: url("../partners/banner.jpg");
+        background-image: url("../partners/banner-2000.jpg");
+        background-image: image-set(
+            "../partners/banner-2000.jpg" 1x,
+            "../partners/banner-2000@2x.jpg" 2x,
+            "../partners/banner-2000@3x.jpg" 3x
+        );
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -38,6 +42,17 @@
             opacity: 0.7;
             z-index: 1;
 
+        }
+    }
+
+    .webp & {
+        &__header {
+            background-image: url("../partners/banner-2000.webp");
+            background-image: image-set(
+                "../partners/banner-2000.webp" 1x,
+                "../partners/banner-2000@2x.webp" 2x,
+                "../partners/banner-2000@3x.webp" 3x
+            );
         }
     }
 
