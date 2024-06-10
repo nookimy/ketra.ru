@@ -694,18 +694,30 @@ picture {
   flex-direction: column;
 }
 
+.main-nav .site-nav__submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav .site-nav__submenu li > a {
+  display: inline-flex;
+  padding-left: 50px;
+}
+
 .main-nav .site-nav a {
   display: inline-flex;
   align-items: center;
   width: 100%;
   min-height: 40px;
   padding: 0 25px;
+  transition: 0.4s;
 }
 
 .main-nav .site-nav a:hover,
 .main-nav .site-nav a:focus,
 .main-nav .site-nav a:active {
-  text-decoration: underline;
+  color: #FEC846;
 }
 
 .location__name {
@@ -7182,6 +7194,10 @@ picture {
     align-items: center;
   }
 
+  .site-nav li {
+    position: relative;
+  }
+
   .site-nav a {
     padding: 0;
     min-height: unset;
@@ -7190,17 +7206,52 @@ picture {
   .main-nav .site-nav {
     justify-content: center;
     flex-direction: row;
-    -moz-column-gap: 30px;
-         column-gap: 30px;
-    row-gap: 10px;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 0;
     width: 50%;
     flex-grow: 1;
     padding-left: 15px;
     padding-right: 15px;
   }
 
+  .main-nav .site-nav > li:hover > .site-nav__submenu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .main-nav .site-nav > li > a {
+    height: 75px;
+  }
+
+  .main-nav .site-nav__submenu {
+    position: absolute;
+    width: 300px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #C8C8C8;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    transition: 0.3s linear;
+  }
+
+  .main-nav .site-nav__submenu li {
+    border-bottom: 1px solid #C8C8C8;
+  }
+
+  .main-nav .site-nav__submenu li:last-child {
+    border-bottom: 0;
+  }
+
+  .main-nav .site-nav__submenu li > a {
+    padding: 15px 10px;
+  }
+
   .main-nav .site-nav a {
-    padding: 0;
+    padding: 10px;
     min-height: unset;
   }
 
@@ -9558,6 +9609,7 @@ picture {
     min-height: 100px;
     padding: 100px 0 0;
     transition: 0.4s;
+    padding-bottom: 30px;
   }
 
   .main-nav--closed {

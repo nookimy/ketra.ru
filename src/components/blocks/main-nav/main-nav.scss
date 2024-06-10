@@ -8,6 +8,7 @@
         min-height: 100px;
         padding: 100px 0 0;
         transition: $transition;
+        padding-bottom: 30px;
 
         &--closed {
             transform: translateY(-100%);

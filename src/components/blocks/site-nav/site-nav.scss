@@ -1,7 +1,13 @@
 .site-nav {
     @include list;
     @include menu; 
-    flex-wrap: wrap;   
+    flex-wrap: wrap;
+    
+    & li {
+        @media (min-width: $xl-width) {
+            position: relative;
+        }
+    }
 
     & a {
         color: inherit;
@@ -22,12 +28,65 @@
         @media (min-width: $xl-width) {
             justify-content: center;
             flex-direction: row;
-            column-gap: 30px;
-            row-gap: 10px;
+            column-gap: 0;
+            row-gap: 0;
             width: 50%;
             flex-grow: 1;
             padding-left: 15px;
             padding-right: 15px;
+        }
+
+        & > li:hover > .site-nav__submenu {
+            @media (min-width: $xl-width) {
+                transform: rotateX(0deg);
+                visibility: visible;
+                opacity: 1;
+            }
+            
+        }
+
+        & > li > a {
+            @media (min-width: $xl-width) {
+                height: 75px;
+            }
+        }
+
+        &__submenu {
+            @include list;
+
+            @media (min-width: $xl-width) {
+                position: absolute; 
+                width: 300px;
+                background-color: $light;
+                color: $dark;
+                border: 1px solid $dark-gray;
+                visibility: hidden;
+                opacity: 0;
+
+                transform-origin: 0% 0%;
+                transform: rotateX(-90deg);
+                transition: .3s linear;
+            }
+
+            & li {
+                @media (min-width: $xl-width) {
+                    border-bottom: 1px solid $dark-gray;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            & li > a {
+                display: inline-flex;
+                padding-left: 50px;
+
+                @media (min-width: $xl-width) {
+                    padding: 15px 10px;
+                }
+            }
+            
         }
     
         & a {
@@ -36,15 +95,16 @@
             width: 100%;
             min-height: 40px;
             padding: 0 25px;
+            transition: $transition;
 
             &:hover,
             &:focus,
             &:active {
-                text-decoration: underline;
+                color: $maize;
             }
     
             @media (min-width: $xl-width) {
-                padding: 0;
+                padding: 10px;
                 min-height: unset;
             }
         }
