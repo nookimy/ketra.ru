@@ -1,22 +1,19 @@
-.main-slider {
-    background-color: beige;    
+.main-slider {  
 
     &__list {
         @include list;
         width: 100%;
-        max-width: 2000px;
-        margin: 0 auto;
     }
 
     &__item {
-        color: $light-gray;
         display: flex;
-        align-items: center;  
-        
+        align-items: center;
     }
+
 
     &__pagination-wrap {
         display: none;
+
         @media (min-width: $lg-width) {
             display: block;
             position: relative;
@@ -39,6 +36,7 @@
                background: $gray;
                opacity: 1;
                transition: all 0.4s;
+               cursor: pointer;
             }
 
             & .swiper-pagination-bullet-active {
@@ -50,47 +48,56 @@
     }
 
     & .slide {
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba($color: #020202, $alpha: 0.5);
-            z-index: 5;
-        }        
-
-        &__img {
+        &__cover {
             position: relative;
-            display: block;
             width: 100%;
             min-height: calc(100vh - 120px);
-            object-position: center;
-            object-fit: cover;
-
-            
+            overflow: hidden;
+            z-index: 1;
 
             @media (min-width: $xl-width) {
                 min-height: 100vh;
             }
         }
 
-        &__wrap {
+        &__video {
+            display: none;
+
+            @media (min-width: $xl-width) {
+                display: block;
+                z-index: 10;
+            }
+        }
+
+        &__img,
+        &__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover; 
+        }
+
+        &__img {
+            z-index: 5;
+        }
+
+        &__content {
             position: absolute;
             padding-top: 100px;
             padding-bottom: 50px;
             left: 50%;
             @include container;
             transform: translateX(-50%);
-            z-index: 10;  
-            box-sizing: border-box;     
+            box-sizing: border-box; 
+            z-index: 20;    
         }
 
         &__title,
         &__text {
+            color: $light-gray;
             @media (min-width: $xl-width) {
                 max-width: 715px;
             }

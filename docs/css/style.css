@@ -766,21 +766,14 @@ picture {
   fill: #C8C8C8;
 }
 
-.main-slider {
-  background-color: beige;
-}
-
 .main-slider__list {
   margin: 0;
   padding: 0;
   list-style: none;
   width: 100%;
-  max-width: 2000px;
-  margin: 0 auto;
 }
 
 .main-slider__item {
-  color: #F1F1F1;
   display: flex;
   align-items: center;
 }
@@ -789,33 +782,36 @@ picture {
   display: none;
 }
 
-.main-slider .slide {
+.main-slider .slide__cover {
   position: relative;
-}
-
-.main-slider .slide::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(2, 2, 2, 0.5);
-  z-index: 5;
-}
-
-.main-slider .slide__img {
-  position: relative;
-  display: block;
   width: 100%;
   min-height: calc(100vh - 120px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.main-slider .slide__video {
+  display: none;
+}
+
+.main-slider .slide__img,
+.main-slider .slide__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.main-slider .slide__wrap {
+.main-slider .slide__img {
+  z-index: 5;
+}
+
+.main-slider .slide__content {
   position: absolute;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -826,8 +822,13 @@ picture {
   padding-left: 25px;
   padding-right: 25px;
   transform: translateX(-50%);
-  z-index: 10;
   box-sizing: border-box;
+  z-index: 20;
+}
+
+.main-slider .slide__title,
+.main-slider .slide__text {
+  color: #F1F1F1;
 }
 
 .main-slider .slide__title {
@@ -5641,6 +5642,7 @@ picture {
     background: #5C5C5C;
     opacity: 1;
     transition: all 0.4s;
+    cursor: pointer;
   }
 
   .main-slider__pagination-wrap .swiper-pagination-bullet-active {
@@ -7279,11 +7281,16 @@ picture {
     padding: 0 15px;
   }
 
-  .main-slider .slide__img {
+  .main-slider .slide__cover {
     min-height: 100vh;
   }
 
-  .main-slider .slide__wrap {
+  .main-slider .slide__video {
+    display: block;
+    z-index: 10;
+  }
+
+  .main-slider .slide__content {
     padding-left: 30px;
     padding-right: 30px;
   }
