@@ -1463,6 +1463,10 @@ picture {
   padding: 10px 0 0 0;
 }
 
+.projects__slide .project__content picture {
+  width: 100%;
+}
+
 .projects__slide .project__content img {
   width: 100%;
   aspect-ratio: 4/3;
