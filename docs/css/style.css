@@ -1953,6 +1953,7 @@ picture {
 
 .certificates__item {
   position: relative;
+  border: 1px solid #C8C8C8;
 }
 
 .certificates__item a {
@@ -5849,6 +5850,38 @@ picture {
   .certificates__list {
     display: flex;
     gap: unset;
+    height: auto;
+  }
+
+  .certificates__item {
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+    border-left: none;
+    border-right: none;
+  }
+
+  .certificates__item::before,
+  .certificates__item::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #C8C8C8;
+    top: 0;
+    z-index: 1;
+  }
+
+  .certificates__item::after {
+    right: 0;
+    display: none;
+  }
+
+  .certificates__item::before {
+    left: 0;
+  }
+
+  .certificates__item:last-child::after {
+    display: block;
   }
 
   .reviews--section .page__wrap {
@@ -7877,26 +7910,6 @@ picture {
 
   .certificates__list {
     width: 2066.6666666667;
-  }
-
-  .certificates__item::before,
-  .certificates__item::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    background-color: #C8C8C8;
-    top: 0;
-    z-index: 1;
-  }
-
-  .certificates__item::before {
-    left: 0;
-  }
-
-  .certificates__item:last-child::after {
-    right: 0;
-    display: block;
   }
 
   .certificates__item img {

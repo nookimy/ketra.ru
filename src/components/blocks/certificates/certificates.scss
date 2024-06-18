@@ -77,6 +77,7 @@
         @media (min-width: $lg-width) {
             display: flex;
             gap: unset;
+            height: auto;            
         }        
 
         @media (min-width: $xl-width) {
@@ -86,8 +87,14 @@
 
     &__item {
         position: relative;
+        border: 1px solid $dark-gray;
 
-        @media (min-width: $xl-width) {
+        @media (min-width: $lg-width) {
+            border-top: 1px solid $dark-gray;
+            border-bottom: 1px solid $dark-gray;
+            border-left: none;
+            border-right: none;
+
             &::before,
             &::after {
                 content: "";
@@ -99,15 +106,18 @@
                 z-index: 1;
             }
 
+            &::after {
+                right: 0;
+                display: none;
+            }
+
             &::before {
                 left: 0;
 
             }
 
             &:last-child {
-
-                &::after {
-                    right: 0;
+                &::after {                    
                     display: block;
                 }
             }
