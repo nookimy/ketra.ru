@@ -6454,16 +6454,6 @@ picture {
     z-index: 10;
   }
 
-  .about .laboratory__img--main::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -25px;
-    width: 100vw;
-    height: 1px;
-    background-color: #C8C8C8;
-  }
-
   .about .laboratory__img--main::after {
     content: "";
     position: absolute;
