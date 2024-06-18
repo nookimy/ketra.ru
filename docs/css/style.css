@@ -7733,6 +7733,10 @@ picture {
     justify-content: space-between;
   }
 
+  .news__item.article .article__img {
+    padding-right: 0;
+  }
+
   .news__item.article p {
     position: relative;
     margin: 0;
