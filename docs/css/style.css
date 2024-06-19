@@ -1401,9 +1401,9 @@ picture {
   color: #ecb226;
   display: inline-flex;
   align-items: center;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-top: auto;
-  margin-right: 30px;
+  margin-left: 30px;
   margin-bottom: 30px;
 }
 
