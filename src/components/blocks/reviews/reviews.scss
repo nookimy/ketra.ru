@@ -1,23 +1,70 @@
 .reviews {
     &--section {
         & .page__wrap {
+            @media (min-width: $xl-width) {
+                &::after {
+                    display: block;
+                }
+            }
+            
+        }
+
+    }
+
+    &__swiper {
+        position: relative;
+    }
+
+    &__nav {
+        @media (min-width: $md-width) {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        & .swiper-button-next, 
+        & .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            margin: 0;
+
+            @media (min-width: $md-width) {
+                top: -60px;
+            }
+            
+
+
             &::after {
-                display: block;
+            display: none;
             }
 
-            @media (min-width: $lg-width) {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas: "title link-more" "list list";
-                column-gap: 100px;
-                row-gap: 40px;
+            & .icon {
+            width: 15px;
+            height: 15px;
+
+            & use.icon__symbol {
+                fill: $gray;
+            }
+            }
+
+        }
+
+        & .swiper-button-next {
+            right: 0;
+
+            @media (min-width: $md-width) {
+                right: 30px;  
             }
         }
 
-        & .page__subtitle {
-            @media (min-width: $lg-width) {
-                margin-bottom: 0;
-                grid-area: title;
+        & .swiper-button-prev {
+            left: 0;
+
+            @media (min-width: $md-width) {
+                left: unset;
+                right: 80px;  
             }
         }
     }
@@ -25,17 +72,9 @@
     &__list {
         width: 100%;
         @include list;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-
-        @media (min-width: $md-width) {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @media (min-width: $lg-width) {
-            grid-area: list;
-        }
+        display: flex;
+        align-items: stretch;
+        height: 100%;
 
         @media (min-width: $xl-width) {
             position: relative;
@@ -63,9 +102,7 @@
 
 
     &__item {
-        border-bottom: 1px solid $dark-gray;
         padding-bottom: 20px;
-        flex-grow: 1;
 
         @media (min-width: $lg-width) {
             border: none;
@@ -159,20 +196,5 @@
                 }
             }
         }        
-    }   
-    
-    & .page__link-more {
-        margin-top: 30px;
-
-        @media (min-width: $lg-width) {
-            justify-self: end;
-            align-self: center;
-            margin-top: 0;
-            grid-area: link-more;
-        }
-
-        @media (min-width: $xl-width) {
-            margin-right: 20px;
-        }
     }
 }

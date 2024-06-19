@@ -1974,8 +1974,41 @@ picture {
      object-position: center;
 }
 
-.reviews--section .page__wrap::after {
-  display: block;
+.reviews__swiper {
+  position: relative;
+}
+
+.reviews__nav .swiper-button-next,
+.reviews__nav .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
+
+.reviews__nav .swiper-button-next::after,
+.reviews__nav .swiper-button-prev::after {
+  display: none;
+}
+
+.reviews__nav .swiper-button-next .icon,
+.reviews__nav .swiper-button-prev .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.reviews__nav .swiper-button-next .icon use.icon__symbol,
+.reviews__nav .swiper-button-prev .icon use.icon__symbol {
+  fill: #5C5C5C;
+}
+
+.reviews__nav .swiper-button-next {
+  right: 0;
+}
+
+.reviews__nav .swiper-button-prev {
+  left: 0;
 }
 
 .reviews__list {
@@ -1983,15 +2016,13 @@ picture {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+  display: flex;
+  align-items: stretch;
+  height: 100%;
 }
 
 .reviews__item {
-  border-bottom: 1px solid #C8C8C8;
   padding-bottom: 20px;
-  flex-grow: 1;
 }
 
 .reviews__item .review__media {
@@ -2065,10 +2096,6 @@ picture {
 
 .reviews__item .review__author-position {
   margin-bottom: 5px;
-}
-
-.reviews .page__link-more {
-  margin-top: 30px;
 }
 
 .breadcrumbs {
@@ -5179,8 +5206,25 @@ picture {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .reviews__list {
-    grid-template-columns: 1fr 1fr;
+  .reviews__nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .reviews__nav .swiper-button-next,
+  .reviews__nav .swiper-button-prev {
+    top: -60px;
+  }
+
+  .reviews__nav .swiper-button-next {
+    right: 30px;
+  }
+
+  .reviews__nav .swiper-button-prev {
+    left: unset;
+    right: 80px;
   }
 
   .catalog__list {
@@ -5888,27 +5932,6 @@ picture {
     display: block;
   }
 
-  .reviews--section .page__wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title link-more" "list list";
-    -moz-column-gap: 100px;
-         column-gap: 100px;
-    row-gap: 40px;
-  }
-
-  .reviews--section .page__subtitle {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    margin-bottom: 0;
-    grid-area: title;
-  }
-
-  .reviews__list {
-    grid-area: list;
-  }
-
   .reviews__item {
     border: none;
   }
@@ -5921,13 +5944,6 @@ picture {
   .reviews__item .review__author-location {
     font-size: 20px;
     line-height: 1.35;
-  }
-
-  .reviews .page__link-more {
-    justify-self: end;
-    align-self: center;
-    margin-top: 0;
-    grid-area: link-more;
   }
 
   .catalog-sections__sections-list {
@@ -7048,12 +7064,6 @@ picture {
     -ms-grid-column-span: 3;
   }
 
-  .reviews--section .page__wrap > .vacancies__advantages-list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
   .partners__benefits > .page__wrap > .vacancies__advantages-list {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
@@ -7911,6 +7921,10 @@ picture {
     width: 413.33px;
   }
 
+  .reviews--section .page__wrap::after {
+    display: block;
+  }
+
   .reviews__list {
     position: relative;
   }
@@ -7960,10 +7974,6 @@ picture {
 
   .reviews__item .review__author-location {
     margin-top: auto;
-  }
-
-  .reviews .page__link-more {
-    margin-right: 20px;
   }
 
   .breadcrumbs {
@@ -9309,12 +9319,6 @@ picture {
     -ms-grid-column-span: 3;
   }
 
-  .reviews--section .page__wrap > .statistics__list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
   .partners__benefits > .page__wrap > .statistics__list {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
@@ -9323,11 +9327,6 @@ picture {
   }
 
   .news .page__link-more {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-
-  .reviews--section .page__wrap > .page__link-more {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
   }
@@ -9344,52 +9343,11 @@ picture {
     -ms-grid-column-span: 3;
   }
 
-  .reviews--section .page__wrap > .news__list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
   .partners__benefits > .page__wrap > .news__list {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
-  }
-
-  .statistics .page__wrap > .reviews__list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
-  .news--section .page__wrap > .reviews__list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
-  .reviews--section .page__wrap > .reviews__list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
-  .partners__benefits > .page__wrap > .reviews__list {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-  }
-
-  .reviews .page__link-more {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-
-  .reviews--section .page__wrap > .page__link-more {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
   }
 
   .product__gallery {
@@ -9431,12 +9389,6 @@ picture {
   }
 
   .news--section .page__wrap > ol {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
-  .reviews--section .page__wrap > ol {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -9484,12 +9436,6 @@ picture {
     -ms-grid-column-span: 3;
   }
 
-  .reviews--section .page__wrap > .production__list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
   .partners__benefits > .page__wrap > .production__list {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
@@ -9504,12 +9450,6 @@ picture {
   }
 
   .news--section .page__wrap > .counter__list {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-  }
-
-  .reviews--section .page__wrap > .counter__list {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -9542,11 +9482,6 @@ picture {
   }
 
   .news__list {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-
-  .reviews__list {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
   }

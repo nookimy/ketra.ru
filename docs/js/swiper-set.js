@@ -13,6 +13,28 @@ const sliderMainInit = () => {
     })
 }
 
+/*Главный слайдер*/
+const sliderReviews = document.querySelector('.reviews__swiper.swiper');
+const sliderReviewsInit = () => {
+    yourSliderReviews = new Swiper(sliderReviews, {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            768: {
+                slidesPerView: 2,
+            },
+        }
+    })
+}
+
 let viewPortWidth = document.documentElement.clientWidth;
 
 /*Сдайдер Сертификаты включается только при ширине вьюпорта от 1024px*/
@@ -193,6 +215,7 @@ window.addEventListener('resize', certSliderResize, regionsSliderResize, project
 
 
 sliderMainInit();
+sliderReviewsInit();
 projectsSliderResize();
 regionsSliderResize();
 certSliderResize();
