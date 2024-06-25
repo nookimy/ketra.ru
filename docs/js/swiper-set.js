@@ -13,7 +13,7 @@ const sliderMainInit = () => {
     })
 }
 
-/*Главный слайдер*/
+/*Отзывы*/
 const sliderReviews = document.querySelector('.reviews__swiper.swiper');
 const sliderReviewsInit = () => {
     yourSliderReviews = new Swiper(sliderReviews, {
@@ -30,6 +30,7 @@ const sliderReviewsInit = () => {
             // when window width is >= 320px
             768: {
                 slidesPerView: 2,
+                spaceBetween: 0,
             },
         }
     })
