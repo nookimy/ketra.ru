@@ -30,9 +30,10 @@ const sliderReviewsInit = () => {
             // when window width is >= 320px
             768: {
                 slidesPerView: 2,
-
+                spaceBetween: 30,
             },
             1200: {
+                slidesPerView: 2,
                 spaceBetween: 0,
             },
         }
