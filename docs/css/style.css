@@ -5483,6 +5483,11 @@ picture {
     background-color: #F1F1F1;
   }
 
+  .partners__header::after,
+  .partners__header::before {
+    display: none;
+  }
+
   .partners__factory .page__wrap {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "logo title" "logo text";
@@ -5602,6 +5607,11 @@ picture {
 
   .distributors__item:nth-child(odd) {
     background-color: #F1F1F1;
+  }
+
+  .vacancies__header::after,
+  .vacancies__header::before {
+    display: none;
   }
 
   .vacancies__video .video {
@@ -8728,6 +8738,10 @@ picture {
     width: 100%;
   }
 
+  .partners__header {
+    height: 100vh;
+  }
+
   .partners__header-text {
     padding-left: 30px;
     padding-right: 30px;
@@ -8931,6 +8945,10 @@ picture {
 
   .vacancies .breadcrumbs::before {
     display: none;
+  }
+
+  .vacancies__header {
+    height: 100vh;
   }
 
   .vacancies__header-text {

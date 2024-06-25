@@ -39,6 +39,10 @@
         background-position: center;
         position: relative;
 
+        @media (min-width: $xl-width) {
+            height: 100vh;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -65,6 +69,13 @@
             opacity: 0.7;
             z-index: 1;
 
+        }
+
+        @media (min-width: $md-width) {
+            &::after,
+            &::before {
+                display: none;
+            }
         }
     }
 

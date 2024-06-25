@@ -54,7 +54,7 @@ const mainTasks = gulp.series(svg, gulp.parallel(copycss, copyjs, html, scss, js
 // Построение сценариев выполнения задач
 const dev = gulp.series(mainTasks, gulp.parallel(watcher, server));
 
-const test = gulp.series(img);
+const test = gulp.series(imgopt);
 
 //Экспорт сценариев
 export { fonts }
