@@ -126,6 +126,15 @@
         }
     }
 
+    & .site-nav__submenu {
+        @include list;
+        display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        padding-left: 30px;
+    }
+
     & .catalog-nav {
         display: none;
 
