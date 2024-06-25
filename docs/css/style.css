@@ -4975,6 +4975,74 @@ picture {
   border-bottom: 1px solid #C8C8C8;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(217, 217, 217, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal--open .modal__content {
+  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.modal__body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.modal__content {
+  max-width: 500px;
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px 30px 20px 20px;
+  width: 100%;
+  box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+.modal__close-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.modal__close-btn use.icon__symbol {
+  stroke: #2E2E2E;
+}
+
 .social-links__list {
   margin: 0;
   padding: 0;
