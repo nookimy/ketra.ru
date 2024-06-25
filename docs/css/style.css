@@ -2043,6 +2043,11 @@ picture {
 .reviews__item .review__media a {
   display: block;
   position: relative;
+  height: 100%;
+}
+
+.reviews__item .review__media a picture {
+  height: 100%;
 }
 
 .reviews__item .review__media a .play-video {
@@ -2344,6 +2349,7 @@ picture {
   margin-top: 20px;
   margin-bottom: 20px;
   grid-area: title;
+  text-shadow: #ffffff 0px 0 5px;
 }
 
 .catalog__item .product__description {
@@ -7994,12 +8000,18 @@ picture {
     display: block;
   }
 
-  .reviews__list {
+  .reviews__item {
+    padding-bottom: 0;
+    display: flex;
+    gap: 0;
+  }
+
+  .reviews__item {
     position: relative;
   }
 
-  .reviews__list::before,
-  .reviews__list::after {
+  .reviews__item::before,
+  .reviews__item::after {
     content: "";
     position: absolute;
     left: 0;
@@ -8009,18 +8021,12 @@ picture {
     z-index: 1;
   }
 
-  .reviews__list::before {
+  .reviews__item::before {
     top: 0;
   }
 
-  .reviews__list::after {
+  .reviews__item::after {
     bottom: 0;
-  }
-
-  .reviews__item {
-    padding-bottom: 0;
-    display: flex;
-    gap: 0;
   }
 
   .reviews__item .review__media {

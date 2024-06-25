@@ -76,6 +76,23 @@
         align-items: stretch;
         height: 100%;
 
+        
+    }
+
+
+    &__item {
+        padding-bottom: 20px;
+
+        @media (min-width: $lg-width) {
+            border: none;
+        }
+
+        @media (min-width: $xl-width) {
+            padding-bottom: 0;
+            display: flex;
+            gap: 0;
+        }
+
         @media (min-width: $xl-width) {
             position: relative;
             &::before,
@@ -97,21 +114,6 @@
             &::after {
                 bottom: 0;
             }
-        }
-    }
-
-
-    &__item {
-        padding-bottom: 20px;
-
-        @media (min-width: $lg-width) {
-            border: none;
-        }
-
-        @media (min-width: $xl-width) {
-            padding-bottom: 0;
-            display: flex;
-            gap: 0;
         }
 
         & .review {           
@@ -137,6 +139,11 @@
             &__media a {
                 display: block;
                 position: relative;
+                height: 100%;
+
+                & picture {
+                    height: 100%;
+                }
 
                 & .play-video {
                     position: absolute;
