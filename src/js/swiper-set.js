@@ -3,15 +3,14 @@
 const sliderMain = document.querySelector('.main-slider.swiper');
 const sliderMainInit = () => {
     yourSliderMain = new Swiper(sliderMain, {
-        navigation: true,
         pagination: {
-            el: '.swiper-pagination',
-        },        
-        /*autoplay: {
-           delay: 5000,
-        }*/
+        el: '.swiper-pagination',
+        clickable: true,
+    },
     })
 }
+
+
 
 /*Отзывы*/
 const sliderReviews = document.querySelector('.reviews__swiper.swiper');
@@ -23,9 +22,6 @@ const sliderReviewsInit = () => {
         },
         slidesPerView: 1,
         spaceBetween: 30,
-        pagination: {
-            el: '.swiper-pagination',
-        },
         breakpoints: {
             // when window width is >= 320px
             768: {
@@ -36,7 +32,7 @@ const sliderReviewsInit = () => {
                 slidesPerView: 2,
                 spaceBetween: 0,
             },
-        }
+        },
     })
 }
 
@@ -217,8 +213,6 @@ function projectsSliderResize () {
 
 
 window.addEventListener('resize', certSliderResize, regionsSliderResize, projectsSliderResize);
-
-
 sliderMainInit();
 sliderReviewsInit();
 projectsSliderResize();

@@ -772,6 +772,7 @@ picture {
   padding: 0;
   list-style: none;
   width: 100%;
+  z-index: 1;
 }
 
 .main-slider__item {
@@ -780,7 +781,39 @@ picture {
 }
 
 .main-slider__pagination-wrap {
-  display: none;
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  z-index: 5;
+}
+
+.main-slider__pagination-wrap .swiper-pagination {
+  width: auto;
+  bottom: 20px;
+  right: 20px;
+  top: unset;
+  left: unset;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-slider__pagination-wrap .swiper-pagination-bullet {
+  width: 20px;
+  height: 9px;
+  margin-bottom: 2px !important;
+  border-radius: 0;
+  background: #5C5C5C;
+  opacity: 1;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.main-slider__pagination-wrap .swiper-pagination-bullet-active {
+  background: #FEC846;
+  margin-bottom: 10px !important;
 }
 
 .main-slider .slide__cover {
@@ -5774,41 +5807,6 @@ picture {
     transform: translateY(-50%) translateX(50%);
   }
 
-  .main-slider__pagination-wrap {
-    display: block;
-    position: relative;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .main-slider__pagination-wrap .swiper-pagination {
-    width: auto;
-    bottom: 20px;
-    right: 20px;
-    left: unset;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .main-slider__pagination-wrap .swiper-pagination-bullet {
-    width: 20px;
-    height: 9px;
-    margin-bottom: 2px !important;
-    border-radius: 0;
-    background: #5C5C5C;
-    opacity: 1;
-    transition: all 0.4s;
-    cursor: pointer;
-  }
-
-  .main-slider__pagination-wrap .swiper-pagination-bullet-active {
-    background: #FEC846;
-    margin-bottom: 10px !important;
-  }
-
   .main-slider .slide__text {
     font-size: 20px;
     line-height: 1.35;
@@ -7183,11 +7181,6 @@ picture {
 }
 
 @media (min-width: 1024px) and (min-width: 1200px) {
-  .main-slider__pagination-wrap {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   .partners__benefits::before {
     top: 60px;
   }
@@ -7426,6 +7419,11 @@ picture {
     justify-content: center;
     min-height: 75px;
     padding: 0 15px;
+  }
+
+  .main-slider__pagination-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .main-slider .slide__cover {

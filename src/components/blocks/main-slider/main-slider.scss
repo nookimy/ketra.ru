@@ -1,8 +1,8 @@
 .main-slider {  
-
     &__list {
         @include list;
         width: 100%;
+        z-index: 1;
     }
 
     &__item {
@@ -12,37 +12,35 @@
 
 
     &__pagination-wrap {
-        display: none;
+        position: relative;
+        @include container;
+        z-index: 5;
+        
 
-        @media (min-width: $lg-width) {
-            display: block;
-            position: relative;
-            @include container;
-    
-            & .swiper-pagination {
-                width: auto;
-                bottom: 20px;
-                right: 20px;
-                left: unset;
-                display: flex;
-                flex-direction: column;
-            }
-    
-            & .swiper-pagination-bullet {
-               width: 20px;
-               height: 9px;
-               margin-bottom: 2px !important;
-               border-radius: 0;
-               background: $gray;
-               opacity: 1;
-               transition: all 0.4s;
-               cursor: pointer;
-            }
+        & .swiper-pagination {
+            width: auto;
+            bottom: 20px;
+            right: 20px;
+            top: unset;
+            left: unset;
+            display: flex;
+            flex-direction: column;
+        }
 
-            & .swiper-pagination-bullet-active {
-                background: $maize;
-                margin-bottom: 10px !important;
-            }
+        & .swiper-pagination-bullet {
+            width: 20px;
+            height: 9px;
+            margin-bottom: 2px !important;
+            border-radius: 0;
+            background: $gray;
+            opacity: 1;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        & .swiper-pagination-bullet-active {
+            background: $maize;
+            margin-bottom: 10px !important;
         }
         
     }
