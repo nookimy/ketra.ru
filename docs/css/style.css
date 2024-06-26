@@ -1138,6 +1138,10 @@ picture {
   grid-template-columns: 1fr;
 }
 
+.calc__form fieldset#brick-model select > option {
+  color: #2E2E2E;
+}
+
 .calc__form fieldset#wall-data {
   width: 100%;
 }

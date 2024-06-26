@@ -208,6 +208,12 @@
             &#brick-model {
                 width: 100%;
                 grid-template-columns: 1fr;
+
+                & select {
+                    & > option {
+                        color: $black;
+                    }
+                }
             }
 
             &#wall-data {
