@@ -5272,9 +5272,13 @@ picture {
   text-transform: uppercase;
 }
 
+.main-footer .catalog-nav__list > li > span {
+  display: block;
+  margin-bottom: 15px;
+}
+
 .main-footer .catalog-nav__list > li > a {
   display: inline-block;
-  margin-bottom: 15px;
 }
 
 .main-footer .catalog-nav__list > li ul {

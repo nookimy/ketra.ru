@@ -162,10 +162,15 @@
 
             & > li {
                 @include menu;
+                
+
+                & > span {
+                    display: block;
+                    margin-bottom: 15px;
+                }
 
                 & > a {
-                    display: inline-block;
-                    margin-bottom: 15px;                    
+                    display: inline-block;                    
                 }
 
                 & ul {
@@ -175,8 +180,6 @@
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
-
-
                 }
             }
 
