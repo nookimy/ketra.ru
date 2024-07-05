@@ -28,11 +28,11 @@
         margin: 0 auto;
         min-height: calc(100vh - 120px);
         overflow: hidden;
-        background-image: url("../vacancies/banner-2000.jpg");
+        background-image: url("../vacancies/banner2-2000.jpg");
         background-image: image-set(
-            "../vacancies/banner-2000.jpg" 1x,
-            "../vacancies/banner-2000@2x.jpg" 2x,
-            "../vacancies/banner-2000@3x.jpg" 3x
+            "../vacancies/banner2-2000.jpg" 1x,
+            "../vacancies/banner2-2000@2x.jpg" 2x,
+            "../vacancies/banner2-2000@3x.jpg" 3x
         );
         background-repeat: no-repeat;
         background-size: cover;
@@ -81,11 +81,11 @@
 
     .webp & {
         &__header {
-            background-image: url("../vacancies/banner-2000.webp");
+            background-image: url("../vacancies/banner2-2000.webp");
             background-image: image-set(
-                "../vacancies/banner-2000.webp" 1x,
-                "../vacancies/banner-2000@2x.webp" 2x,
-                "../vacancies/banner-2000@3x.webp" 3x
+                "../vacancies/banner2-2000.webp" 1x,
+                "../vacancies/banner2-2000@2x.webp" 2x,
+                "../vacancies/banner2-2000@3x.webp" 3x
             );
         }
     }
