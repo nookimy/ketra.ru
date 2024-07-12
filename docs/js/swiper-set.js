@@ -7,6 +7,10 @@ const sliderMainInit = () => {
         el: '.swiper-pagination',
         clickable: true,
     },
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,        
+      },
     })
 }
 
