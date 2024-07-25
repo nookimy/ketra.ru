@@ -10,7 +10,7 @@ const sliderMainInit = () => {
     autoplay: {
         delay: 10000,
         disableOnInteraction: false,        
-      },
+    },
     })
 }
 

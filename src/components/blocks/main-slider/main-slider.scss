@@ -96,6 +96,8 @@
         &__title,
         &__text {
             color: $light-gray;
+            text-shadow: $gray 0 0 5px;
+
             @media (min-width: $xl-width) {
                 max-width: 715px;
             }

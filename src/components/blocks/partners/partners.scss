@@ -88,9 +88,17 @@
         position: relative;
         z-index: 5;
 
+        @media (min-width: $md-width) {
+            margin-top: 100px;
+        }
+
+        @media (min-width: $xl-width) {
+            margin-top: 200px;
+        }
+
         & .title,
         & .text {
-            
+            text-shadow: $gray 0 0 5px;
             @media (min-width: $xl-width) {
                 max-width: calc(100% - 105px);
             }
