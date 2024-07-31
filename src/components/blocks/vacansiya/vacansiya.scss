@@ -1,0 +1,102 @@
+.vacancy {
+    position: relative;
+
+    & h2 {
+        @include h2;
+        @include mp;
+        margin-bottom: 30px;
+    }
+
+    & h2,
+    & p {
+        overflow-wrap: break-word;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 100vw;
+        height: 1px;
+        background-color: $dark-gray;
+        transform: translateX(-50%);
+    }
+
+    @media (min-width: $xl-width) {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 100vw;
+            height: 1px;
+            background-color: $dark-gray;
+            transform: translateX(-50%);
+        } 
+    }
+
+    & .page__wrap {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+
+        @media (min-width: $lg-width) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "title title" "text advantage";
+            row-gap: 0;
+            column-gap: 50px;
+        }
+
+        @media (min-width: $xl-width) {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    & .page__title {
+        @media (min-width: $lg-width) {
+            grid-area: title;
+        }
+    }
+
+    &__advantage,
+    &__text {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        
+    }
+
+    &__advantage {
+        width: 100%;
+
+        @media (min-width: $lg-width) {
+            grid-area: advantage;
+        }
+
+        @media (min-width: $xl-width) {
+            padding-left: 0;
+            padding-right: 30px;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        @media (min-width: $lg-width) {
+            grid-area: text;
+        }
+
+        @media (min-width: $xl-width) {
+            padding-left: 30px;
+            padding-right: 0;
+        }
+    }
+}

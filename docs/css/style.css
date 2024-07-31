@@ -4681,6 +4681,61 @@ picture {
   color: #5C5C5C;
 }
 
+.vacancy {
+  position: relative;
+}
+
+.vacancy h2 {
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.vacancy h2,
+.vacancy p {
+  overflow-wrap: break-word;
+}
+
+.vacancy::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  height: 1px;
+  background-color: #C8C8C8;
+  transform: translateX(-50%);
+}
+
+.vacancy .page__wrap {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
+.vacancy__advantage,
+.vacancy__text {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.vacancy__advantage {
+  width: 100%;
+}
+
+.vacancy__text {
+  width: 100%;
+}
+
 .contacts__branch {
   overflow: hidden;
 }
@@ -6936,6 +6991,31 @@ picture {
     line-height: 1.35;
   }
 
+  .vacancy .page__wrap {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "text advantage";
+    row-gap: 0;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+
+  .vacancy .page__title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+  }
+
+  .vacancy__advantage {
+    grid-area: advantage;
+  }
+
+  .vacancy__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+
   .contacts {
     position: relative;
     overflow: hidden;
@@ -8458,6 +8538,11 @@ picture {
       -ms-grid-column: 2;
   }
 
+  .tests__list li > .vacancy__text {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+  }
+
   .tests__list li > .feedback__text {
       -ms-grid-row: 2;
       -ms-grid-column: 2;
@@ -9171,6 +9256,36 @@ picture {
     height: unset;
   }
 
+  .vacancy::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #C8C8C8;
+    transform: translateX(-50%);
+  }
+
+  .vacancy .page__wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .vacancy .page__wrap::after {
+    display: block;
+  }
+
+  .vacancy__advantage {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
+  .vacancy__text {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
   .contacts__branch .page__subtitle {
     padding-left: 0;
   }
@@ -9550,6 +9665,11 @@ picture {
     -ms-grid-row-span: 3;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
+  }
+
+  .vacancy__advantage {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
   }
 
   .feedback__text-phone {
